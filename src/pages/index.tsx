@@ -1,14 +1,36 @@
-import { type NextPage, NextComponentType } from "next";
+import { type NextPage, NextComponentType, NextPageContext } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "~/components/Navbar";
 
-interface TestimonialProps {
-  test: string;
-}
-
 const TestimonialCard = ({}) => {
   return <div>test</div>;
+};
+
+const ServiceCard: NextPage<{
+  title: string;
+  description: string;
+  poweredBy: string;
+  pic: string;
+}> = ({ title, description, poweredBy, pic }) => {
+  return (
+    <div className="relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5 transition-all duration-1000 hover:scale-105 hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0">
+      <img
+        src={pic}
+        className="absolute p-4  transition-all duration-1000"
+        alt=""
+      />
+      <div className="absolute h-full  w-full translate-y-3/4 bg-zinc-900/95 transition duration-1000">
+        <h1 className=" px-5 pb-3  pt-6 font-fjalla text-xl tracking-tight text-zinc-300">
+          {title}
+        </h1>
+        <p className="p-5 text-sm text-zinc-400"> {description}</p>
+        <p className="absolute bottom-10 right-0 pr-2 font-fjalla text-[#BF1922]">
+          powered by {poweredBy}
+        </p>
+      </div>
+    </div>
+  );
 };
 
 const Home: NextPage = () => {
@@ -44,7 +66,7 @@ const Home: NextPage = () => {
         {/* fjalla font  */}
       </Head>
       <Navbar />
-      <main className="">
+      <main className="pb-16">
         {/* hero section  */}
         <div className="dotted-bg flex flex-col items-center justify-center  gap-3 pb-28 pt-28 ">
           <h1 className="font-fjalla text-6xl font-semibold tracking-tight">
@@ -58,10 +80,10 @@ const Home: NextPage = () => {
             soluciones tecnológicas.
           </p>
           <div className="mt-5 flex gap-4">
-            <button className="rounded-lg border bg-zinc-50 px-3 py-2 font-semibold tracking-tight text-zinc-800 shadow">
+            <button className="rounded-lg border bg-zinc-50 px-3 py-2 font-semibold tracking-tight text-zinc-800 shadow transition hover:scale-105">
               Siguenos
             </button>
-            <button className="glow-on-hover rounded-lg border bg-[#BF1922] px-3 py-2 font-semibold tracking-tight text-white shadow-sm">
+            <button className="glow-on-hover rounded-lg border bg-[#BF1922] px-3 py-2 font-semibold tracking-tight text-white shadow-sm transition hover:scale-105">
               Contáctanos
             </button>
           </div>
@@ -69,7 +91,7 @@ const Home: NextPage = () => {
         {/* hero section  */}
 
         {/* trusted by section  */}
-        <div>
+        <div className="pb-40">
           <h1 className="text-tracking-tight pb-10 text-center text-3xl  text-zinc-400">
             Estas compañias confían en nuestras soluciones
           </h1>
@@ -92,6 +114,53 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* trusted by section  */}
+
+        {/* services section  */}
+        <div className="h-screen overflow-hidden bg-zinc-900 py-10">
+          <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-[#BF1922] ">
+            Servicios
+          </h1>
+          <div className="flex justify-around">
+            {[
+              {
+                title: "Inteligencia de negocios",
+                description:
+                  "Con nuestra solución de BI, proveemos de un asistente inteligente que relaciona todas las aristas de su negocio y sugiere caminos para la generación de caja basado en sus datos contables, ventas e inventarios",
+                poweredBy: "exek.io",
+                pic: "inteligencia-de-negocios.png",
+              },
+              {
+                title: "Automatización de procesos",
+                description:
+                  "RPA permite aumentar la productividad y hacer que la fuerza laboral se dedique a tomar decisiones estratégicas del negocio. ",
+                poweredBy: "robocorp.com",
+                pic: "rpa.png",
+              },
+              {
+                title: "Digitalización operacional",
+                description:
+                  "Digitalizamos los procesos operativos con la ayuda de Monday.com, con la cual agilizamos y simplificamos el trabajo de pequeñas y grandes empresas",
+                poweredBy: "Monday.com",
+                pic: "monday2.png",
+              },
+              {
+                title: "Sistema de referidos",
+                description:
+                  "Solución todo en uno para escalar su programa de referencia de empleados al impulsar la participación de los empleados, generar candidatos de calidad y brindarle el máximo rendimiento de contrataciones de referencia.",
+                poweredBy: "ReferScout",
+                pic: "sistema-de-referidos.png",
+              },
+            ].map((item) => (
+              <ServiceCard
+                title={item.title}
+                description={item.description}
+                poweredBy={item.poweredBy}
+                pic={item.pic}
+              />
+            ))}
+          </div>
+        </div>
+        {/* services section  */}
       </main>
     </>
   );
