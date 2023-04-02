@@ -6,6 +6,28 @@ import Navbar from "~/components/Navbar";
 const TestimonialCard = ({}) => {
   return <div>test</div>;
 };
+const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
+  pic,
+  title,
+  delay,
+}) => {
+  return (
+    <div
+      style={{ animationDelay: `${delay * 1000}ms` }}
+      className="dx-card-animation relative aspect-square w-[250px] rounded-lg [&>*:nth-child(1)]:hover:grayscale-0 "
+    >
+      <img
+        src={pic}
+        style={{ animationDelay: `${delay * 1000}ms` }}
+        className="dx-card-animation absolute h-full w-full object-contain grayscale transition-all duration-700 hover:grayscale-0"
+        alt=""
+      />
+      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 pt-16 font-fjalla text-xl font-semibold text-[#BF1922]">
+        {title}
+      </h1>
+    </div>
+  );
+};
 
 const ServiceCard: NextPage<{
   title: string;
@@ -14,10 +36,10 @@ const ServiceCard: NextPage<{
   pic: string;
 }> = ({ title, description, poweredBy, pic }) => {
   return (
-    <div className="relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5 transition-all duration-1000 hover:scale-105 hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0">
+    <div className=" relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5 transition-all duration-1000 hover:scale-105 hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0">
       <img
         src={pic}
-        className="absolute p-4  transition-all duration-1000"
+        className="absolute p-4 grayscale transition-all duration-1000"
         alt=""
       />
       <div className="absolute h-full  w-full translate-y-3/4 bg-zinc-900/95 transition duration-1000">
@@ -66,7 +88,7 @@ const Home: NextPage = () => {
         {/* fjalla font  */}
       </Head>
       <Navbar />
-      <main className="pb-16">
+      <main className="pb-32">
         {/* hero section  */}
         <div className="dotted-bg flex flex-col items-center justify-center  gap-3 pb-28 pt-28 ">
           <h1 className="font-fjalla text-6xl font-semibold tracking-tight">
@@ -116,9 +138,9 @@ const Home: NextPage = () => {
         {/* trusted by section  */}
 
         {/* services section  */}
-        <div className="h-screen overflow-hidden bg-zinc-900 py-10">
+        <div className="relative mx-4 mb-32 h-screen overflow-hidden rounded-lg bg-zinc-900 py-10">
           <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-[#BF1922] ">
-            Servicios
+            Nuestros Servicios
           </h1>
           <div className="flex justify-around">
             {[
@@ -161,6 +183,46 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* services section  */}
+
+        {/* metodologia dx  */}
+        <div className="overflow-hidden pb-16">
+          <h1 className="text-center font-fjalla text-4xl font-semibold">
+            Metodologia DX
+          </h1>
+          <div className="grid grid-cols-3 place-items-center gap-y-5 ">
+            <DxCards
+              delay={1}
+              title="Descubrimiento"
+              pic="descubrimiento-dx.jpeg"
+            />
+            <DxCards
+              delay={3}
+              title="Modelamiento de solución"
+              pic="modelamiento-dx.jpeg"
+            />
+            <DxCards
+              delay={5}
+              title="Gerencia de proyecto"
+              pic="gerencia-dx.jpeg"
+            />
+            <DxCards
+              delay={7}
+              title="Implementación"
+              pic="implementacion-dx.jpeg"
+            />
+            <DxCards
+              delay={9}
+              title="Optimización"
+              pic="optimizacion-dx.jpeg"
+            />
+            <DxCards
+              delay={11}
+              title="Soporte y mantenimiento"
+              pic="soporte-dx.jpeg"
+            />
+          </div>
+        </div>
+        {/* metodologia dx  */}
       </main>
     </>
   );

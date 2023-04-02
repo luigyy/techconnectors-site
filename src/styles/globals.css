@@ -65,6 +65,28 @@
   border-radius: 10px;
 }
 
+.dx-card-animation {
+  animation: move-dx-card 30s infinite ease-out;
+}
+
+@keyframes move-dx-card {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(-25px);
+  }
+  50% {
+    transform: translate(0px, 14px);
+  }
+  75% {
+    transform: translate(10px, -14px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
 @keyframes move-dotted-bg {
   to {
     background-position: 0 150%;
