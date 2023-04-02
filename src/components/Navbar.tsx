@@ -19,6 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         <p className="text-lg">Servicios</p>
         <p className="text-lg">Casos de uso</p>
         <p className="text-lg">Contáctanos</p>
+        <p className="text-lg">Acerca de</p>
       </div>
       {/* right  */}
     </div>
