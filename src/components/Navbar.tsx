@@ -16,10 +16,20 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
 
       {/* right  */}
       <div className="flex items-center gap-4 tracking-tight">
-        <p className="text-lg">Servicios</p>
-        <p className="text-lg">Casos de uso</p>
-        <p className="text-lg">Contáctanos</p>
-        <p className="text-lg">Acerca de</p>
+        <a href="#services" className="text-lg">
+          Servicios
+        </a>
+        <a
+          href="https://calendly.com/exekventas/omar?month=2023-04"
+          target="_blank"
+          className="text-lg"
+        >
+          Agendar cita
+        </a>
+        <a href="#footer" className="text-lg">
+          Contacto
+        </a>
+        <a className="text-lg">Acerca de</a>
       </div>
       {/* right  */}
     </div>

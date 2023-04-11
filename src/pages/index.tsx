@@ -88,7 +88,7 @@ const Home: NextPage = () => {
         {/* fjalla font  */}
       </Head>
       <Navbar />
-      <main className="pb-32">
+      <main className="">
         {/* hero section  */}
         <div className="dotted-bg flex flex-col items-center justify-center  gap-3 pb-28 pt-28 ">
           <h1 className="font-fjalla text-6xl font-semibold tracking-tight">
@@ -102,12 +102,18 @@ const Home: NextPage = () => {
             soluciones tecnológicas.
           </p>
           <div className="mt-5 flex gap-4">
-            <button className="rounded-lg border bg-zinc-50 px-3 py-2 font-semibold tracking-tight text-zinc-800 shadow transition hover:scale-105">
-              Siguenos
-            </button>
-            <button className="glow-on-hover rounded-lg border bg-[#BF1922] px-3 py-2 font-semibold tracking-tight text-white shadow-sm transition hover:scale-105">
+            <a
+              href="#footer"
+              className="rounded-lg border bg-zinc-50 px-3 py-2 font-semibold tracking-tight text-zinc-800 shadow transition hover:scale-105"
+            >
+              Síguenos
+            </a>
+            <a
+              href="#form"
+              className="glow-on-hover rounded-lg border bg-[#BF1922] px-3 py-2 font-semibold tracking-tight text-white shadow-sm transition hover:scale-105"
+            >
               Contáctanos
-            </button>
+            </a>
           </div>
         </div>
         {/* hero section  */}
@@ -138,7 +144,10 @@ const Home: NextPage = () => {
         {/* trusted by section  */}
 
         {/* services section  */}
-        <div className="relative mx-4 mb-32 h-screen overflow-hidden rounded-lg bg-zinc-900 py-10">
+        <div
+          className="relative mx-4 mb-32 h-screen overflow-hidden rounded-lg bg-zinc-900 py-10"
+          id="services"
+        >
           <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-[#BF1922] ">
             Nuestros Servicios
           </h1>
@@ -224,8 +233,35 @@ const Home: NextPage = () => {
         </div>
         {/* metodologia dx  */}
 
+        {/* testimonials */}
+        <div className="mt-5 h-screen">
+          <h1 className="pb-10 text-center font-fjalla text-4xl font-semibold">
+            Esto es lo que nuestros clientes dicen de nosotros
+          </h1>
+          <div className=" mx-auto aspect-[10/12] w-[90%] max-w-[280px] rounded  border-zinc-800/30 bg-zinc-800  ">
+            <div className="flex items-center">
+              <div className="h-14 w-14 rounded-full border"></div>
+              <div className="flex flex-col">
+                <h1 className="px-2 pt-5 font-fjalla text-lg text-zinc-50">
+                  Marcus Lanhman
+                </h1>
+                <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
+              </div>
+            </div>
+            <p className="px-2 pt-3  text-zinc-50">
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              dolorum impedit praesentium perferendis aliquid debitis harum
+              sapiente veniam. Enim, alias."
+            </p>
+            <h1 className="px-2 pt-10 text-sm italic text-zinc-50">
+              -Lead software engineer at Microsoft
+            </h1>
+          </div>
+        </div>
+        {/* testimonials */}
+
         {/* contact form  */}
-        <div className="pt-20">
+        <div className="pt-20" id="form">
           <h1 className="text-center font-fjalla text-5xl">
             <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
               {" "}
@@ -277,17 +313,31 @@ const Home: NextPage = () => {
         {/* contact form  */}
 
         {/* footer  */}
-        <div className="mt-24 flex">
+        <div className="mt-24 flex bg-zinc-800 px-1 py-5 " id="footer">
           <div className="w-1/2">
             <h1 className="font-fjalla text-3xl text-[#FB1922]">
               TechConnectors
             </h1>
-            <h1 className="text-lg">
+            <h1 className=" text-lg text-zinc-50">
               Llorente de Tibás, Calle del Progreso, Condominio Villa Bonita
             </h1>
-            <h1>Tel: +506 70549186 Tel: +506 70149487</h1>
+            <h1 className="text-zinc-50">
+              Tel: +506 70549186 Tel: +506 70149487
+            </h1>
           </div>
-          <div className="w-1/2"> </div>
+          <div className="flex w-1/2 flex-col px-2 ">
+            <h1 className="pb-2 text-right text-xl font-semibold text-zinc-50">
+              Síguenos
+            </h1>
+            <span className="ml-auto">
+              <a
+                href="https://www.linkedin.com/company/techconnectorslatam/"
+                target="_blank"
+              >
+                <img src="linkedin-logo.png" className="w-12 " alt="" />
+              </a>
+            </span>
+          </div>
         </div>
         {/* footer  */}
       </main>

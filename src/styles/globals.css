@@ -10,6 +10,10 @@
   @apply text-zinc-800;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 /* hero background effect  */
 .dotted-bg {
   /* border: 2px red solid; */
