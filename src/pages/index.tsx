@@ -14,12 +14,12 @@ const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
   return (
     <div
       style={{ animationDelay: `${delay * 1000}ms` }}
-      className="dx-card-animation relative aspect-square w-[250px] rounded-lg [&>*:nth-child(1)]:hover:grayscale-0 "
+      className=" relative aspect-square w-[250px] rounded-lg [&>*:nth-child(1)]:hover:grayscale-0 "
     >
       <img
         src={pic}
         style={{ animationDelay: `${delay * 1000}ms` }}
-        className="dx-card-animation absolute h-full w-full object-contain grayscale transition-all duration-700 hover:grayscale-0"
+        className="dx-card-animation absolute h-full w-full object-contain grayscale  hover:grayscale-0"
         alt=""
       />
       <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 pt-16 font-fjalla text-xl font-semibold text-[#BF1922]">
