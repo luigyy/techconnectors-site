@@ -223,6 +223,73 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* metodologia dx  */}
+
+        {/* contact form  */}
+        <div className="pt-20">
+          <h1 className="text-center font-fjalla text-5xl">
+            <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
+              {" "}
+              Contáctanos
+            </span>{" "}
+            y recibe una asesoría gratis
+          </h1>
+          <div className="mx-auto mt-14  flex max-w-[600px] flex-col justify-around ">
+            <form>
+              <div className="flex justify-between ">
+                <div className="flex flex-col">
+                  <label htmlFor="" className="font-fjalla">
+                    Nombre
+                  </label>
+                  <input
+                    type="text"
+                    className="rounded-md border-x-2 border-[#BF1922] py-1 pl-1 outline-none focus:shadow-md "
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="" className="font-fjalla">
+                    Correo
+                  </label>
+                  <input
+                    type="email"
+                    className="rounded-md border-x-2 border-[#BF1922] py-1 pl-1 outline-none focus:shadow-md"
+                  />
+                </div>
+              </div>
+              <div className="mt-4  flex flex-col ">
+                <label htmlFor="" className="font-fjalla">
+                  Mensaje
+                </label>
+                <textarea
+                  name=""
+                  id=""
+                  rows={4}
+                  className="rounded-lg border-x-2 border-[#BF1922] py-1 pl-2 outline-none focus:shadow-md"
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Enviar"
+                className="mt-4 w-20 rounded-lg border border-[#BF1922] bg-zinc-50 px-3 py-2 text-center font-semibold tracking-tight text-zinc-800 shadow transition hover:scale-105"
+              />
+            </form>
+          </div>
+        </div>
+        {/* contact form  */}
+
+        {/* footer  */}
+        <div className="mt-24 flex">
+          <div className="w-1/2">
+            <h1 className="font-fjalla text-3xl text-[#FB1922]">
+              TechConnectors
+            </h1>
+            <h1 className="text-lg">
+              Llorente de Tibás, Calle del Progreso, Condominio Villa Bonita
+            </h1>
+            <h1>Tel: +506 70549186 Tel: +506 70149487</h1>
+          </div>
+          <div className="w-1/2"> </div>
+        </div>
+        {/* footer  */}
       </main>
     </>
   );
