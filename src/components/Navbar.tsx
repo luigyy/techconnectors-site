@@ -29,7 +29,6 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         <a href="#footer" className="text-lg">
           Contacto
         </a>
-        <a className="text-lg">Acerca de</a>
       </div>
       {/* right  */}
     </div>

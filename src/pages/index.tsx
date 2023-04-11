@@ -3,9 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Navbar from "~/components/Navbar";
 
-const TestimonialCard = ({}) => {
-  return <div>test</div>;
-};
 const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
   pic,
   title,
@@ -234,28 +231,86 @@ const Home: NextPage = () => {
         {/* metodologia dx  */}
 
         {/* testimonials */}
-        <div className="mt-5 h-screen">
+        <div className="mt-28  h-screen">
           <h1 className="pb-10 text-center font-fjalla text-4xl font-semibold">
             Esto es lo que nuestros clientes dicen de nosotros
           </h1>
-          <div className=" mx-auto aspect-[10/12] w-[90%] max-w-[280px] rounded  border-zinc-800/30 bg-zinc-800  ">
-            <div className="flex items-center">
-              <div className="h-14 w-14 rounded-full border"></div>
-              <div className="flex flex-col">
-                <h1 className="px-2 pt-5 font-fjalla text-lg text-zinc-50">
-                  Marcus Lanhman
-                </h1>
-                <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
+          <div className="justify- flex flex-wrap justify-center ">
+            <div className=" glow-on-hover mx-auto aspect-[10/11] w-[90%] max-w-[280px] rounded  border-zinc-800/30 bg-zinc-900 p-3  ">
+              <div className="flex items-center p-2">
+                <div className="h-14 w-14 overflow-hidden rounded-full ">
+                  <img
+                    src="man.jpg"
+                    className="h-full w-full object-cover "
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="px-2 pt-5 font-fjalla text-lg text-[#fb1922] ">
+                    Marcus Lanhman
+                  </h1>
+                  <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
+                </div>
               </div>
+              <p className="px-2 pt-3  text-zinc-50">
+                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                dolorum impedit praesentium perferendis aliquid debitis harum
+                sapiente veniam. Enim, alias."
+              </p>
+              <h1 className="px-2 pt-8 text-sm italic text-zinc-50">
+                Lead software engineer at Microsoft
+              </h1>
             </div>
-            <p className="px-2 pt-3  text-zinc-50">
-              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              dolorum impedit praesentium perferendis aliquid debitis harum
-              sapiente veniam. Enim, alias."
-            </p>
-            <h1 className="px-2 pt-10 text-sm italic text-zinc-50">
-              -Lead software engineer at Microsoft
-            </h1>
+            <div className=" glow-on-hover mx-auto aspect-[10/11] w-[90%] max-w-[280px]  rounded border-zinc-800/30 bg-zinc-900 p-3 ">
+              <div className="flex items-center p-2">
+                <div className="h-14 w-14 overflow-hidden rounded-full ">
+                  <img
+                    src="man.jpg"
+                    className="h-full w-full object-cover "
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="px-2 pt-5 font-fjalla text-lg text-[#fb1922] ">
+                    Marcus Lanhman
+                  </h1>
+                  <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
+                </div>
+              </div>
+              <p className="px-2 pt-3  text-zinc-50">
+                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                dolorum impedit praesentium perferendis aliquid debitis harum
+                sapiente veniam. Enim, alias."
+              </p>
+              <h1 className="px-2 pt-8 text-sm italic text-zinc-50">
+                Lead software engineer at Microsoft
+              </h1>
+            </div>
+            <div className=" glow-on-hover glow-on-hover mx-auto aspect-[10/11] w-[90%] max-w-[280px] rounded  border-zinc-800/30 bg-zinc-900 p-3 ">
+              <div className="flex items-center p-2">
+                <div className="h-14 w-14 overflow-hidden rounded-full ">
+                  <img
+                    src="man.jpg"
+                    className="h-full w-full object-cover "
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="px-2 pt-5 font-fjalla text-lg text-[#fb1922] ">
+                    Marcus Lanhman
+                  </h1>
+                  <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
+                </div>
+              </div>
+              <p className="px-2 pt-3  text-zinc-50">
+                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                dolorum impedit praesentium perferendis aliquid debitis harum
+                sapiente veniam. Enim, alias."
+              </p>
+              <h1 className="px-2 pt-8 text-sm italic text-zinc-50">
+                Lead software engineer at Microsoft
+              </h1>
+            </div>
           </div>
         </div>
         {/* testimonials */}
