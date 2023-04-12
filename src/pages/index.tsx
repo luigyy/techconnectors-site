@@ -145,7 +145,7 @@ const Home: NextPage = () => {
 
           {/* services section  */}
           <div
-            className="relative mx-4 mb-32 min-h-screen overflow-hidden rounded-lg bg-zinc-900 py-10"
+            className="relative mx-4 mb-32 overflow-hidden  rounded-lg bg-zinc-900 py-10 pb-16"
             id="services"
           >
             <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-[#BF1922] ">
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
           {/* metodologia dx  */}
 
           {/* testimonials */}
-          <div className="mt-28  min-h-screen">
+          <div className="mt-28 pb-24 ">
             <h1 className="px-2 pb-10 text-center font-fjalla text-4xl font-semibold">
               Esto es lo que nuestros clientes dicen de nosotros
             </h1>
@@ -289,7 +289,7 @@ const Home: NextPage = () => {
                   Lead software engineer at Microsoft
                 </h1>
               </div>
-              <div className="mx-auto aspect-[10/11] w-[90%] max-w-[280px] rounded border-zinc-800/30  bg-zinc-900 p-3  ">
+              <div className="mx-auto aspect-[10/11] w-[90%] max-w-[280px] rounded border-zinc-800/30  bg-zinc-900 p-3 2xl:p-7  ">
                 <div className="flex items-center p-2">
                   <div className="h-14 w-14 overflow-hidden rounded-full ">
                     <img
