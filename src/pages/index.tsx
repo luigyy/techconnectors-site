@@ -293,7 +293,7 @@ const Home: NextPage = () => {
           {/* testimonials */}
 
           {/* contact form  */}
-          <div className="pt-20" id="form">
+          <div className="px-4 pt-20" id="form">
             <h1 className="text-center font-fjalla text-2xl md:text-5xl">
               <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
                 {" "}
@@ -303,7 +303,7 @@ const Home: NextPage = () => {
             </h1>
             <div className="mx-auto mt-14  flex max-w-[600px] flex-col justify-around p-5 ">
               <form>
-                <div className="flex justify-between gap-2 ">
+                <div className="flex flex-col justify-between gap-2 sm:flex-row ">
                   <div className="flex flex-col">
                     <label htmlFor="" className="font-fjalla">
                       Nombre

@@ -20,7 +20,7 @@ html {
   /* background-image: radial-gradient(#a39e91 1px, transparent 1px);
   background-size: 20px 20px; */
   background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), white 500px),
-    radial-gradient(#9ca69e 1px, transparent 1px) 10px 10px/20px 20px;
+    radial-gradient(#403635 1px, transparent 1px) 10px 10px/20px 20px;
   animation: move-dotted-bg 60s infinite ease-out;
   position: relative;
 }
