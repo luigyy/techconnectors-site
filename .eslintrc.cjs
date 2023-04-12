@@ -20,6 +20,7 @@ const config = {
   },
   plugins: ["@typescript-eslint"],
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+
   rules: {
     "@typescript-eslint/consistent-type-imports": [
       "warn",
@@ -28,6 +29,8 @@ const config = {
         fixStyle: "inline-type-imports",
       },
     ],
+    "react/no-unescaped-entities": 0,
+    "@next/next/no-img-element": "off",
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
 };

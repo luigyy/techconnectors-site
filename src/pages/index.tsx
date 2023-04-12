@@ -1,6 +1,5 @@
-import { type NextPage, NextComponentType, NextPageContext } from "next";
+import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import Navbar from "~/components/Navbar";
 
 const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
@@ -132,8 +131,9 @@ const Home: NextPage = () => {
                 "coca-cola",
                 "canva",
                 "glossier",
-              ].map((item) => (
+              ].map((item, index) => (
                 <img
+                  key={index}
                   src={`${item}.png`}
                   className="mx-7 w-24 object-contain grayscale md:w-36"
                   alt=""
@@ -181,12 +181,13 @@ const Home: NextPage = () => {
                   poweredBy: "ReferScout",
                   pic: "sistema-de-referidos.png",
                 },
-              ].map((item) => (
+              ].map((item, index) => (
                 <ServiceCard
                   title={item.title}
                   description={item.description}
                   poweredBy={item.poweredBy}
                   pic={item.pic}
+                  key={index}
                 />
               ))}
             </div>
