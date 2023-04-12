@@ -10,23 +10,25 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         <span>
           <img src="techconnectors-logo.png" className="w-8" alt="" />
         </span>
-        <p className=" text-lg">TechConnectors</p>
+        <p className=" font-semibold tracking-tighter md:text-lg">
+          TechConnectors
+        </p>
       </div>
       {/* left */}
 
       {/* right  */}
       <div className="flex items-center gap-4 tracking-tight">
-        <a href="#services" className="text-lg">
+        <a href="#services" className="md:text-lg">
           Servicios
         </a>
         <a
           href="https://calendly.com/exekventas/omar?month=2023-04"
           target="_blank"
-          className="text-lg"
+          className="md:text-lg"
         >
           Agendar cita
         </a>
-        <a href="#footer" className="text-lg">
+        <a href="#footer" className="md:text-lg">
           Contacto
         </a>
       </div>
