@@ -1,8 +1,6 @@
 import React from "react";
 
-interface NavbarProps {}
-
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar = () => {
   return (
     <div className=" flex justify-between border-b border-b-zinc-400/40 bg-white px-5 py-2 font-semibold shadow-sm">
       {/* left */}
