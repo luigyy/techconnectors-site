@@ -378,12 +378,28 @@ const Home: NextPage = () => {
                 <h1 className=" font-fjalla text-zinc-200 md:text-right">
                   Siguenos
                 </h1>
-                <div className="pt-2">
-                  <a href="" className="mt-5 md:float-right">
+                <div className="flex items-center justify-end gap-3 pt-2">
+                  <a
+                    href="https://www.linkedin.com/company/techconnectorslatam/"
+                    className="mt-5 md:float-right"
+                    target="_blank"
+                  >
                     <Image
                       src="/linkedin-logo.png"
                       width={40}
                       height={40}
+                      alt="linkedin logo"
+                    />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@techconnectors"
+                    className="mt-5 md:float-right"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/tiktok-logo.png"
+                      width={30}
+                      height={30}
                       alt="linkedin logo"
                     />
                   </a>
