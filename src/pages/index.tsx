@@ -115,7 +115,7 @@ const Home: NextPage = () => {
               showNewsletterPopup.state && !showNewsletterPopup.active
                 ? "translate-x-0"
                 : "translate-x-[150%]"
-            } w-30 h-30 fixed bottom-5  right-5 z-10 rounded-md bg-[#bf1922] p-4 transition-all duration-1000`}
+            } w-30 h-30 fixed bottom-5 right-5  z-10 rounded-md bg-[#bf1922] p-4 transition-all duration-1000`}
           >
             <span
               onClick={() =>
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
             "
               target="_blank"
             >
-              <h1 className=" z-10 font-fjalla text-zinc-200">
+              <h1 className=" z-10  font-fjalla text-zinc-200">
                 Suscríbete a nuestra newsletter
               </h1>
             </a>
@@ -403,6 +403,13 @@ const Home: NextPage = () => {
                 <h1 className="w-3/4 pt-2 text-zinc-400">
                   Costa Rica, San José, Llorente de Tibas. Calle del progreso.
                 </h1>
+                <a
+                  className="  cursor-pointer pt-1 text-zinc-200"
+                  href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7041180298125938689"
+                  target="_blank"
+                >
+                  Subscríbete a nuestra newsletter
+                </a>
               </div>
               <div className="  md:w-1/3 ">
                 <h1 className="font-fjalla text-zinc-200 md:text-center">
