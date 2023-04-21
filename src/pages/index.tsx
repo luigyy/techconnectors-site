@@ -2,6 +2,8 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Navbar from "~/components/Navbar";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
   pic,
@@ -54,6 +56,20 @@ const ServiceCard: NextPage<{
 };
 
 const Home: NextPage = () => {
+  const [showNewsletterPopup, setShowNewsletterPopup] = useState({
+    state: false,
+    active: true,
+  });
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+  useEffect(() => {
+    if (showNewsletterPopup.active) {
+      if (inView) {
+        setShowNewsletterPopup({ state: true, active: false });
+      }
+    }
+  }, [inView]);
   return (
     <>
       <Head>
@@ -62,7 +78,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="mx-auto min-w-fit ">
         <Navbar />
-        <main className="">
+        <main className="relative z-0">
           {/* hero section  */}
           <div className="dotted-bg flex flex-col items-center justify-center  gap-3 pb-28 pt-28 ">
             <h1 className="text-center font-fjalla text-4xl font-semibold tracking-tight md:text-left md:text-6xl">
@@ -90,7 +106,37 @@ const Home: NextPage = () => {
               </a>
             </div>
           </div>
+
           {/* hero section  */}
+
+          {/* newsletter popup  */}
+          <div
+            className={`${
+              showNewsletterPopup.state && !showNewsletterPopup.active
+                ? "translate-x-0"
+                : "translate-x-[150%]"
+            } w-30 h-30 fixed bottom-5  right-5 z-10 rounded-md bg-[#bf1922] p-4 transition-all duration-1000`}
+          >
+            <span
+              onClick={() =>
+                setShowNewsletterPopup({ state: false, active: false })
+              }
+              className="absolute -left-12 top-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-[#bf1922] px-4 py-2 text-xl text-zinc-200 "
+            >
+              X
+            </span>
+            <a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7041180298125938689
+            
+            "
+              target="_blank"
+            >
+              <h1 className=" z-10 font-fjalla text-zinc-200">
+                Suscríbete a nuestra newsletter
+              </h1>
+            </a>
+          </div>
+          {/* newsletter popup  */}
 
           {/* trusted by section  */}
           <div className="pb-40">
@@ -110,7 +156,7 @@ const Home: NextPage = () => {
                 <img
                   key={index}
                   src={`${item}.png`}
-                  className="mx-7 w-24 object-contain  md:w-36"
+                  className="mx-7 w-24 object-contain grayscale  md:w-36"
                   alt=""
                 />
               ))}
@@ -120,7 +166,7 @@ const Home: NextPage = () => {
 
           {/* services section  */}
           <div
-            className="relative mx-1 mb-32 overflow-hidden  rounded-lg bg-zinc-900 py-10 pb-16"
+            className="relative  mx-1 mb-32 overflow-hidden rounded-lg bg-zinc-900 py-10 pb-16"
             id="services"
           >
             <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-zinc-100 ">
@@ -170,7 +216,7 @@ const Home: NextPage = () => {
           {/* services section  */}
 
           {/* metodologia dx  */}
-          <div className="overflow-hidden pb-16">
+          <div className="overflow-hidden pb-16" ref={ref}>
             <h1 className="text-center font-fjalla text-4xl font-semibold">
               Metodologia DX
             </h1>
