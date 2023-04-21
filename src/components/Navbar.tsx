@@ -20,7 +20,7 @@ const Navbar = () => {
           Servicios
         </a>
         <a
-          href="https://calendly.com/exekventas/omar?month=2023-04"
+          href=" https://calendly.com/techconnectors/30min"
           target="_blank"
           className="md:text-lg"
         >

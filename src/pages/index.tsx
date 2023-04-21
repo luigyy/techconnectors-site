@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Navbar from "~/components/Navbar";
+import Image from "next/image";
 
 const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
   pic,
@@ -35,16 +36,17 @@ const ServiceCard: NextPage<{
     <div className=" relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5 transition-all duration-1000 hover:scale-105 hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0">
       <img
         src={pic}
-        className="absolute p-4 grayscale transition-all duration-700"
+        className="absolute p-4 transition-all duration-700"
         alt=""
       />
-      <div className="absolute h-full  w-full bg-zinc-900/95 transition duration-700 md:translate-y-3/4">
+      <div className="absolute h-full  w-full bg-zinc-900/70  transition duration-700 md:translate-y-[80%]">
         <h1 className=" px-5 pb-3  pt-6 font-fjalla text-xl tracking-tight text-zinc-300">
           {title}
         </h1>
-        <p className="p-5 text-sm text-zinc-400"> {description}</p>
-        <p className="absolute bottom-10 right-0 pr-2 font-fjalla text-[#BF1922]">
-          powered by {poweredBy}
+        <p className="p-5 text-sm text-zinc-100"> {description}</p>
+        <p className="absolute bottom-10 right-0 pr-2 font-fjalla text-zinc-200 ">
+          powered by{" "}
+          <span className="font-fjalla text-[#BF1922]">{poweredBy}</span>
         </p>
       </div>
     </div>
@@ -108,7 +110,7 @@ const Home: NextPage = () => {
                 <img
                   key={index}
                   src={`${item}.png`}
-                  className="mx-7 w-24 object-contain grayscale md:w-36"
+                  className="mx-7 w-24 object-contain  md:w-36"
                   alt=""
                 />
               ))}
@@ -118,10 +120,10 @@ const Home: NextPage = () => {
 
           {/* services section  */}
           <div
-            className="relative mx-4 mb-32 overflow-hidden  rounded-lg bg-zinc-900 py-10 pb-16"
+            className="relative mx-1 mb-32 overflow-hidden  rounded-lg bg-zinc-900 py-10 pb-16"
             id="services"
           >
-            <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-[#BF1922] ">
+            <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-zinc-100 ">
               Nuestros Servicios
             </h1>
             <div className="flex flex-wrap  justify-around gap-10">
@@ -130,7 +132,7 @@ const Home: NextPage = () => {
                   title: "Inteligencia de negocios",
                   description:
                     "Con nuestra solución de BI, proveemos de un asistente inteligente que relaciona todas las aristas de su negocio y sugiere caminos para la generación de caja basado en sus datos contables, ventas e inventarios",
-                  poweredBy: "exek.io",
+                  poweredBy: "exek.io + quallie",
                   pic: "inteligencia-de-negocios.png",
                 },
                 {
@@ -294,6 +296,7 @@ const Home: NextPage = () => {
 
           {/* contact form  */}
           <div className="px-4 pt-20" id="form">
+            {" "}
             <h1 className="text-center font-fjalla text-2xl md:text-5xl">
               <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
                 {" "}
@@ -345,30 +348,69 @@ const Home: NextPage = () => {
           {/* contact form  */}
 
           {/* footer  */}
-          <div className="mt-24 flex  bg-zinc-800 px-1  py-5" id="footer">
-            <div className="w-1/2">
-              <h1 className="font-fjalla text-3xl text-[#FB1922]">
-                TechConnectors
-              </h1>
-              <h1 className=" text-lg text-zinc-50">
-                Llorente de Tibás, Calle del Progreso, Condominio Villa Bonita
-              </h1>
-              <h1 className="pt-3 text-zinc-50 sm:pt-0">
-                Tel: +506 70549186 Tel: +506 70149487
-              </h1>
+          <div className="mt-24    bg-zinc-800    px-5 pt-5" id="footer">
+            <div className="flex flex-wrap justify-between gap-5 md:justify-normal md:gap-0">
+              <div className="  md:w-1/3">
+                <h1 className="font-fjalla text-lg text-[#fb1922]">
+                  TechConnectors
+                </h1>
+                <h1 className="w-3/4 pt-2 text-zinc-400">
+                  Costa Rica, San José, Llorente de Tibas. Calle del progreso.
+                </h1>
+              </div>
+              <div className="  md:w-1/3 ">
+                <h1 className="font-fjalla text-zinc-200 md:text-center">
+                  Contacto
+                </h1>
+                <div className="pt-2 text-zinc-200">
+                  <h1 className="text-zinc-400 md:text-center">
+                    omar@techconnectos.co
+                  </h1>
+                  <h1 className=" text-zinc-400 md:text-center">
+                    +506 70549186
+                  </h1>
+                  <h1 className=" text-zinc-400 md:text-center">
+                    +506 70149487
+                  </h1>
+                </div>
+              </div>
+              <div className=" md:w-1/3">
+                <h1 className=" font-fjalla text-zinc-200 md:text-right">
+                  Siguenos
+                </h1>
+                <div className="pt-2">
+                  <a href="" className="mt-5 md:float-right">
+                    <Image
+                      src="/linkedin-logo.png"
+                      width={40}
+                      height={40}
+                      alt="linkedin logo"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="flex w-1/2 flex-col px-2 ">
-              <h1 className="pb-2 text-right text-xl font-semibold text-zinc-50">
-                Síguenos
-              </h1>
-              <span className="ml-auto">
-                <a
-                  href="https://www.linkedin.com/company/techconnectorslatam/"
-                  target="_blank"
-                >
-                  <img src="linkedin-logo.png" className="w-12 " alt="" />
-                </a>
-              </span>
+            <div className="mt-6 flex flex-col border-t border-zinc-400/60 py-2 md:flex-row">
+              <div className="md:w-1/2">
+                <h1 className="text-sm italic text-zinc-200">
+                  Developed by{" "}
+                  <span className="text-zinc-200">
+                    <a
+                      href="https://www.linkedin.com/in/luigy-valverde-mena-14b7ba248/"
+                      className="font-semibold text-[#fb1922]"
+                      target="_blank"
+                    >
+                      Luigy Valverde
+                    </a>
+                  </span>
+                </h1>
+              </div>
+              <div className="md:w-1/2">
+                <h1 className="text-right text-sm italic  text-zinc-200">
+                  © {new Date().getFullYear()} TechConnectors. All rights
+                  reserved
+                </h1>
+              </div>
             </div>
           </div>
           {/* footer  */}
