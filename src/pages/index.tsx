@@ -1,9 +1,9 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Navbar from "~/components/Navbar";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import Link from "next/link";
 
 const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
   pic,
@@ -33,12 +33,16 @@ const ServiceCard: NextPage<{
   description: string;
   poweredBy: string;
   pic: string;
-}> = ({ title, description, poweredBy, pic }) => {
+  link: string;
+}> = ({ title, description, poweredBy, pic, link }) => {
   return (
-    <div className=" relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5 transition-all duration-1000 hover:scale-105 hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0">
+    <Link
+      href={link}
+      className=" relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5 transition-all duration-1000 hover:scale-105 hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0"
+    >
       <img
         src={pic}
-        className="absolute p-4 transition-all duration-700"
+        className="absolute p-4 grayscale transition-all duration-700"
         alt=""
       />
       <div className="absolute h-full  w-full bg-zinc-900/70  transition duration-700 md:translate-y-[80%]">
@@ -51,7 +55,7 @@ const ServiceCard: NextPage<{
           <span className="font-fjalla text-[#BF1922]">{poweredBy}</span>
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -77,7 +81,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Sitio web de techconnectors" />
       </Head>
       <div className="mx-auto min-w-fit ">
-        <Navbar />
         <main className="relative z-0">
           {/* hero section  */}
           <div className="dotted-bg flex flex-col items-center justify-center  gap-3 pb-28 pt-28 ">
@@ -141,18 +144,10 @@ const Home: NextPage = () => {
           {/* trusted by section  */}
           <div className="pb-40">
             <h1 className="text-tracking-tight pb-10 text-center text-2xl text-zinc-400  md:text-3xl">
-              Estas compañias confían en nuestras soluciones
+              Nuestros partners
             </h1>
             <div className="mx-auto flex  flex-wrap justify-center md:w-2/3 ">
-              {[
-                "genpact",
-                "lionsgate",
-                "monday",
-                "hulu",
-                "coca-cola",
-                "canva",
-                "glossier",
-              ].map((item, index) => (
+              {["monday", "quales", "exek", "robocorp"].map((item, index) => (
                 <img
                   key={index}
                   src={`${item}.png`}
@@ -180,6 +175,7 @@ const Home: NextPage = () => {
                     "Con nuestra solución de BI, proveemos de un asistente inteligente que relaciona todas las aristas de su negocio y sugiere caminos para la generación de caja basado en sus datos contables, ventas e inventarios",
                   poweredBy: "exek.io + quallie",
                   pic: "inteligencia-de-negocios.png",
+                  link: "/servicios/inteligencia-empresarial",
                 },
                 {
                   title: "Automatización de procesos",
@@ -187,6 +183,7 @@ const Home: NextPage = () => {
                     "RPA permite aumentar la productividad y hacer que la fuerza laboral se dedique a tomar decisiones estratégicas del negocio. ",
                   poweredBy: "robocorp.com",
                   pic: "rpa.png",
+                  link: "/servicios/rpa",
                 },
                 {
                   title: "Digitalización operacional",
@@ -194,6 +191,7 @@ const Home: NextPage = () => {
                     "Digitalizamos los procesos operativos con la ayuda de Monday.com, con la cual agilizamos y simplificamos el trabajo de pequeñas y grandes empresas",
                   poweredBy: "Monday.com",
                   pic: "monday2.png",
+                  link: "/servicios/monday",
                 },
                 {
                   title: "Sistema de referidos",
@@ -201,6 +199,7 @@ const Home: NextPage = () => {
                     "Solución todo en uno para escalar su programa de referencia de empleados al impulsar la participación de los empleados, generar candidatos de calidad y brindarle el máximo rendimiento de contrataciones de referencia.",
                   poweredBy: "ReferScout",
                   pic: "sistema-de-referidos.png",
+                  link: "/servicios/sistema-referidos",
                 },
               ].map((item, index) => (
                 <ServiceCard
@@ -208,6 +207,7 @@ const Home: NextPage = () => {
                   description={item.description}
                   poweredBy={item.poweredBy}
                   pic={item.pic}
+                  link={item.link}
                   key={index}
                 />
               ))}
@@ -351,13 +351,21 @@ const Home: NextPage = () => {
               y recibe una asesoría gratis
             </h1>
             <div className="mx-auto mt-14  flex max-w-[600px] flex-col justify-around p-5 ">
-              <form>
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="6eb47661-ef2d-4438-87db-825d0e3e1f3d"
+                />
+
                 <div className="flex flex-col justify-between gap-2 sm:flex-row ">
                   <div className="flex flex-col">
                     <label htmlFor="" className="font-fjalla">
                       Nombre
                     </label>
                     <input
+                      name="name"
+                      required
                       type="text"
                       className="rounded-md border-x-2 border-[#BF1922] py-1 pl-1 outline-none focus:shadow-md "
                     />
@@ -367,7 +375,9 @@ const Home: NextPage = () => {
                       Correo
                     </label>
                     <input
+                      name="email"
                       type="email"
+                      required
                       className="rounded-md border-x-2 border-[#BF1922] py-1 pl-1 outline-none focus:shadow-md"
                     />
                   </div>
@@ -377,12 +387,19 @@ const Home: NextPage = () => {
                     Mensaje
                   </label>
                   <textarea
-                    name=""
+                    name="message"
                     id=""
                     rows={4}
+                    required
                     className="rounded-lg border-x-2 border-[#BF1922] py-1 pl-2 outline-none focus:shadow-md"
                   ></textarea>
                 </div>
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://web3forms.com/success"
+                />
+
                 <input
                   type="submit"
                   value="Enviar"
@@ -392,97 +409,6 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* contact form  */}
-
-          {/* footer  */}
-          <div className="mt-24    bg-zinc-800    px-5 pt-5" id="footer">
-            <div className="flex flex-wrap justify-between gap-5 md:justify-normal md:gap-0">
-              <div className="  md:w-1/3">
-                <h1 className="font-fjalla text-lg text-[#fb1922]">
-                  TechConnectors
-                </h1>
-                <h1 className="w-3/4 pt-2 text-zinc-400">
-                  Costa Rica, San José, Llorente de Tibas. Calle del progreso.
-                </h1>
-                <a
-                  className="  cursor-pointer pt-1 text-zinc-200"
-                  href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7041180298125938689"
-                  target="_blank"
-                >
-                  Subscríbete a nuestra newsletter
-                </a>
-              </div>
-              <div className="  md:w-1/3 ">
-                <h1 className="font-fjalla text-zinc-200 md:text-center">
-                  Contacto
-                </h1>
-                <div className="pt-2 text-zinc-200">
-                  <h1 className="text-zinc-400 md:text-center">
-                    omar@techconnectos.co
-                  </h1>
-                  <h1 className=" text-zinc-400 md:text-center">
-                    +506 70549186
-                  </h1>
-                  <h1 className=" text-zinc-400 md:text-center">
-                    +506 70149487
-                  </h1>
-                </div>
-              </div>
-              <div className=" md:w-1/3">
-                <h1 className=" font-fjalla text-zinc-200 md:text-right">
-                  Siguenos
-                </h1>
-                <div className="flex items-center justify-end gap-3 pt-2">
-                  <a
-                    href="https://www.linkedin.com/company/techconnectorslatam/"
-                    className="mt-5 md:float-right"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/linkedin-logo.png"
-                      width={40}
-                      height={40}
-                      alt="linkedin logo"
-                    />
-                  </a>
-                  <a
-                    href="https://www.tiktok.com/@techconnectors"
-                    className="mt-5 md:float-right"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/tiktok-logo.png"
-                      width={30}
-                      height={30}
-                      alt="linkedin logo"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="mt-6 flex flex-col border-t border-zinc-400/60 py-2 md:flex-row">
-              <div className="md:w-1/2">
-                <h1 className="text-sm italic text-zinc-200">
-                  Developed by{" "}
-                  <span className="text-zinc-200">
-                    <a
-                      href="https://www.linkedin.com/in/luigy-valverde-mena-14b7ba248/"
-                      className="font-semibold text-[#fb1922]"
-                      target="_blank"
-                    >
-                      Luigy Valverde
-                    </a>
-                  </span>
-                </h1>
-              </div>
-              <div className="md:w-1/2">
-                <h1 className="text-right text-sm italic  text-zinc-200">
-                  © {new Date().getFullYear()} TechConnectors. All rights
-                  reserved
-                </h1>
-              </div>
-            </div>
-          </div>
-          {/* footer  */}
         </main>
       </div>
     </>

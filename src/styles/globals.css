@@ -25,6 +25,16 @@ html {
   position: relative;
 }
 
+.red-dotted-bg {
+  /* border: 2px red solid; */
+  /* background-image: radial-gradient(#a39e91 1px, transparent 1px);
+  background-size: 20px 20px; */
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), white 500px),
+    radial-gradient(red 1px, transparent 1px) 10px 10px/20px 20px;
+  animation: move-dotted-bg 60s infinite ease-out;
+  position: relative;
+}
+
 /* button effect  */
 .glow-on-hover {
   position: relative;
@@ -48,9 +58,7 @@ html {
     45deg,
     #fb1922,
     #0d085e,
-    #fb1922,
     black,
-    #fb1922,
     #0d085e,
     black,
     #fb1922

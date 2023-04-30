@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavbarModal from "./NavbarModal";
+import Link from "next/link";
 
 const Navbar = () => {
   const [modal, setModal] = useState(false);
@@ -10,9 +11,9 @@ const Navbar = () => {
         <span>
           <img src="techconnectors-logo.png" className="w-8" alt="" />
         </span>
-        <p className="  font-fjalla font-semibold  md:text-lg">
+        <Link href="/" className="  font-fjalla font-semibold  md:text-lg">
           TechConnectors
-        </p>
+        </Link>
       </div>
       {/* left */}
 
@@ -29,19 +30,22 @@ const Navbar = () => {
 
       <div className="hidden md:inline">
         <div className="flex items-center gap-4 tracking-tight">
-          <a href="#services" className="text-sm md:text-lg">
+          <Link href="/#services" className="text-sm md:text-lg">
             Servicios
-          </a>
-          <a
+          </Link>
+          <Link
             href=" https://calendly.com/techconnectors/30min"
             target="_blank"
             className="text-sm md:text-lg"
           >
             Agendar cita
-          </a>
-          <a href="#footer" className="text-sm md:text-lg">
+          </Link>
+          <Link href="/#footer" className="text-sm md:text-lg">
             Contacto
-          </a>
+          </Link>
+          <Link href="/about" className="text-sm md:text-lg">
+            Sobre nosotros
+          </Link>
         </div>
       </div>
       {/* right  */}
