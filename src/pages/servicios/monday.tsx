@@ -24,6 +24,13 @@ const Monday = () => {
           voluptatum error repudiandae, explicabo dignissimos ad beatae
           temporibus quasi at laudantium. Sapiente cumque nulla adipisci!
         </p>
+        <iframe
+          className="mx-auto mt-12 h-[450px] w-[800px]"
+          src="https://www.youtube.com/embed/AinvlG3eaJ4"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
       </div>
     </div>
   );

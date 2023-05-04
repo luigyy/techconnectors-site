@@ -164,8 +164,12 @@ const Home: NextPage = () => {
             className="relative  mx-1 mb-32 overflow-hidden rounded-lg bg-zinc-900 py-10 pb-16"
             id="services"
           >
-            <h1 className="pb-10  text-center font-fjalla text-4xl tracking-tight text-zinc-100 ">
-              Nuestros Servicios
+            <h1 className="pb-1  text-center font-fjalla text-4xl tracking-tight text-zinc-100 ">
+              Acelera <span className="font-fjalla text-[#bf1922]">5x</span> tu
+              negocio!
+            </h1>
+            <h1 className="pb-10 text-center  text-xl text-zinc-400">
+              Estos son algunos de nuestros servicios
             </h1>
             <div className="flex flex-wrap  justify-around gap-10">
               {[
@@ -178,7 +182,7 @@ const Home: NextPage = () => {
                   link: "/servicios/inteligencia-empresarial",
                 },
                 {
-                  title: "Automatización de procesos",
+                  title: "Hiperautomatización ",
                   description:
                     "RPA permite aumentar la productividad y hacer que la fuerza laboral se dedique a tomar decisiones estratégicas del negocio. ",
                   poweredBy: "robocorp.com",
@@ -186,7 +190,7 @@ const Home: NextPage = () => {
                   link: "/servicios/rpa",
                 },
                 {
-                  title: "Digitalización operacional",
+                  title: "Ecosistemas digitales",
                   description:
                     "Digitalizamos los procesos operativos con la ayuda de Monday.com, con la cual agilizamos y simplificamos el trabajo de pequeñas y grandes empresas",
                   poweredBy: "Monday.com",
@@ -194,10 +198,9 @@ const Home: NextPage = () => {
                   link: "/servicios/monday",
                 },
                 {
-                  title: "Sistema de referidos",
-                  description:
-                    "Solución todo en uno para escalar su programa de referencia de empleados al impulsar la participación de los empleados, generar candidatos de calidad y brindarle el máximo rendimiento de contrataciones de referencia.",
-                  poweredBy: "ReferScout",
+                  title: "Estrategia de transformación digital",
+                  description: "",
+                  poweredBy: "",
                   pic: "sistema-de-referidos.png",
                   link: "/servicios/sistema-referidos",
                 },
@@ -257,85 +260,24 @@ const Home: NextPage = () => {
 
           {/* testimonials */}
           <div className="mt-28 pb-24 ">
-            <h1 className="px-2 pb-10 text-center font-fjalla text-4xl font-semibold">
-              Esto es lo que nuestros clientes dicen de nosotros
+            <h1 className="pb-12 text-center text-3xl text-zinc-400 ">
+              Estos clientes confían en nosotros
             </h1>
-            <div className="flex flex-wrap justify-center gap-4 ">
-              <div className=" hover:glow-on-hover mx-auto aspect-[10/11] w-[90%] max-w-[280px] rounded  border-zinc-800/30 bg-zinc-900 p-3  ">
-                <div className="flex items-center p-2">
-                  <div className="h-14 w-14 overflow-hidden rounded-full ">
-                    <img
-                      src="man.jpg"
-                      className="h-full w-full object-cover "
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <h1 className="px-2 pt-5 font-fjalla text-lg text-[#fb1922] ">
-                      Marcus Lanhman
-                    </h1>
-                    <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
-                  </div>
-                </div>
-                <p className="px-2 pt-3  text-zinc-50">
-                  " Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dicta dolorum impedit praesentium perferendis aliquid debitis
-                  harum sapiente veniam. Enim, alias."
-                </p>
-                <h1 className="px-2 pt-8 text-sm italic text-zinc-50">
-                  Lead software engineer at Microsoft
-                </h1>
-              </div>
-              <div className=" hover:glow-on-hover mx-auto aspect-[10/11] w-[90%] max-w-[280px]  rounded border-zinc-800/30 bg-zinc-900 p-3 ">
-                <div className="flex items-center p-2">
-                  <div className="h-14 w-14 overflow-hidden rounded-full ">
-                    <img
-                      src="man.jpg"
-                      className="h-full w-full object-cover "
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <h1 className="px-2 pt-5 font-fjalla text-lg text-[#fb1922] ">
-                      Marcus Lanhman
-                    </h1>
-                    <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
-                  </div>
-                </div>
-                <p className="px-2 pt-3  text-zinc-50">
-                  " Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dicta dolorum impedit praesentium perferendis aliquid debitis
-                  harum sapiente veniam. Enim, alias."
-                </p>
-                <h1 className="px-2 pt-8 text-sm italic text-zinc-50">
-                  Lead software engineer at Microsoft
-                </h1>
-              </div>
-              <div className="mx-auto aspect-[10/11] w-[90%] max-w-[280px] rounded border-zinc-800/30  bg-zinc-900 p-3 2xl:p-7  ">
-                <div className="flex items-center p-2">
-                  <div className="h-14 w-14 overflow-hidden rounded-full ">
-                    <img
-                      src="man.jpg"
-                      className="h-full w-full object-cover "
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <h1 className="px-2 pt-5 font-fjalla text-lg text-[#fb1922] ">
-                      Marcus Lanhman
-                    </h1>
-                    <h1 className=" px-2 text-sm text-zinc-50">10/10/2022</h1>
-                  </div>
-                </div>
-                <p className="px-2 pt-3  text-zinc-50">
-                  " Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dicta dolorum impedit praesentium perferendis aliquid debitis
-                  harum sapiente veniam. Enim, alias."
-                </p>
-                <h1 className="px-2 pt-8 text-sm italic text-zinc-50">
-                  Lead software engineer at Microsoft
-                </h1>
-              </div>
+            <div className="mx-auto flex  flex-wrap justify-center md:w-2/3 ">
+              {[
+                "ava-logo.png",
+                "dbugger-logo.jpeg",
+                "gualapack-logo.png",
+                "integra-logo.png",
+                "loteria-logo.png",
+                "partnergy-logo.png",
+              ].map((item, index) => (
+                <img
+                  className="mx-7 w-24 object-contain grayscale  md:w-36"
+                  src={item}
+                  alt={item}
+                />
+              ))}
             </div>
           </div>
           {/* testimonials */}

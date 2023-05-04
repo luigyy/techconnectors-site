@@ -12,7 +12,7 @@ const Rpa = () => {
         </h1>
       </div>
       <div className="px-4 py-16 md:px-32">
-        <h1 className="text-center font-fjalla text-3xl">Robocorp</h1>
+        <h1 className="text-center font-fjalla text-3xl">Robocorp Gen2</h1>
         <h1 className="text-center text-lg italic text-zinc-500">
           Lorem, ipsum.
         </h1>
@@ -24,6 +24,13 @@ const Rpa = () => {
           voluptatum error repudiandae, explicabo dignissimos ad beatae
           temporibus quasi at laudantium. Sapiente cumque nulla adipisci!
         </p>
+        <iframe
+          className="mx-auto mt-12 max-h-[450px] max-w-[800px]"
+          src="https://www.youtube.com/embed/_kevv1KtGyQ"
+          title="YouTube video player"
+          allowFullScreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
       </div>
     </div>
   );
