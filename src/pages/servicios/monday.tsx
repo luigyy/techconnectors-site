@@ -17,7 +17,7 @@ const Monday = () => {
           Lorem, ipsum.
         </h1>
 
-        <p className="px-32 py-5 text-zinc-600">
+        <p className="mx-auto w-[85%] py-5 text-zinc-600 md:w-auto md:px-32">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
           molestiae maiores incidunt recusandae delectus pariatur provident
           aperiam ratione blanditiis molestias culpa facere aliquid totam eaque,
@@ -25,7 +25,7 @@ const Monday = () => {
           temporibus quasi at laudantium. Sapiente cumque nulla adipisci!
         </p>
         <iframe
-          className="mx-auto mt-12 h-[450px] w-[800px]"
+          className="mx-auto  mt-12 aspect-[800/450] max-h-[450px] w-[85%] max-w-[800px]"
           src="https://www.youtube.com/embed/AinvlG3eaJ4"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

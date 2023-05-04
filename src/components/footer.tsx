@@ -21,7 +21,7 @@ const Footer = ({}) => {
           <h1 className="font-fjalla text-zinc-200 md:text-center">Contacto</h1>
           <div className="pt-2 text-zinc-200">
             <h1 className="text-zinc-400 md:text-center">
-              omar@techconnectos.co
+              omar@techconnectors.co
             </h1>
             <h1 className=" text-zinc-400 md:text-center">+506 70549186</h1>
             <h1 className=" text-zinc-400 md:text-center">+506 70149487</h1>

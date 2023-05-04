@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import NavbarModal from "./NavbarModal";
 import Link from "next/link";
 
@@ -23,7 +24,12 @@ const Navbar = () => {
           className="absolute right-3 top-4  flex items-center"
           onClick={() => setModal(!modal)}
         >
-          <img src="hamburger-menu-icon.png" width={30} alt="" />
+          <Image
+            src={"/hamburger-menu-icon.png"}
+            width={30}
+            height={30}
+            alt=""
+          />
         </button>
         <NavbarModal modal={modal} setModal={setModal} />
       </div>

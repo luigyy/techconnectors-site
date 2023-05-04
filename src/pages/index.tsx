@@ -38,7 +38,7 @@ const ServiceCard: NextPage<{
   return (
     <Link
       href={link}
-      className=" relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5 transition-all duration-1000 hover:scale-105 hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0"
+      className=" relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border border-zinc-50/5  transition-all duration-1000 hover:scale-105 hover:border-[#bf1922] hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0"
     >
       <img
         src={pic}
@@ -49,7 +49,7 @@ const ServiceCard: NextPage<{
         <h1 className=" px-5 pb-3  pt-6 font-fjalla text-xl tracking-tight text-zinc-300">
           {title}
         </h1>
-        <p className="p-5 text-sm text-zinc-100"> {description}</p>
+        <p className="p-5  text-zinc-50"> {description}</p>
         <p className="absolute bottom-10 right-0 pr-2 font-fjalla text-zinc-200 ">
           powered by{" "}
           <span className="font-fjalla text-[#BF1922]">{poweredBy}</span>
@@ -171,7 +171,7 @@ const Home: NextPage = () => {
             <h1 className="pb-10 text-center  text-xl text-zinc-400">
               Estos son algunos de nuestros servicios
             </h1>
-            <div className="flex flex-wrap  justify-around gap-10">
+            <div className="flex flex-wrap justify-center gap-20 gap-x-40">
               {[
                 {
                   title: "Inteligencia de negocios",
@@ -199,10 +199,19 @@ const Home: NextPage = () => {
                 },
                 {
                   title: "Estrategia de transformación digital",
-                  description: "",
-                  poweredBy: "",
+                  description:
+                    "Creamos planes detallados para objetivos especificos.",
+                  poweredBy: "Estrategas de T.D.",
                   pic: "sistema-de-referidos.png",
-                  link: "/servicios/sistema-referidos",
+                  link: "/servicios/estrategia",
+                },
+                {
+                  title: "Fabrica de la innovación",
+                  description:
+                    "Creamos soluciones personalizadas para su empresa",
+                  poweredBy: "Soluciones personalizadas",
+                  pic: "soluciones-personalizadas.png",
+                  link: "/servicios/fabrica",
                 },
               ].map((item, index) => (
                 <ServiceCard
@@ -260,10 +269,10 @@ const Home: NextPage = () => {
 
           {/* testimonials */}
           <div className="mt-28 pb-24 ">
-            <h1 className="pb-12 text-center text-3xl text-zinc-400 ">
+            <h1 className=" pb-12 text-center text-3xl text-zinc-400 ">
               Estos clientes confían en nosotros
             </h1>
-            <div className="mx-auto flex  flex-wrap justify-center md:w-2/3 ">
+            <div className="mx-auto flex flex-wrap  justify-center gap-8 md:w-2/3 ">
               {[
                 "ava-logo.png",
                 "dbugger-logo.jpeg",
@@ -281,9 +290,22 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* testimonials */}
+          <div>
+            <h1 className="box-border pb-12 text-center font-fjalla text-2xl md:text-5xl">
+              <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
+                {" "}
+                Contáctanos
+              </span>{" "}
+              y recibe una asesoría gratis
+            </h1>
+            <iframe
+              className=" mx-auto h-[1200px] w-[85%] max-w-[400px] border-2 bg-white"
+              src="https://forms.monday.com/forms/embed/f7128c563225d103bf0916f48c8e5644?r=use1"
+            ></iframe>
+          </div>
 
           {/* contact form  */}
-          <div className="px-4 pt-20" id="form">
+          {/* <div className="px-4 pt-20" id="form">
             {" "}
             <h1 className="text-center font-fjalla text-2xl md:text-5xl">
               <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
@@ -349,7 +371,7 @@ const Home: NextPage = () => {
                 />
               </form>
             </div>
-          </div>
+          </div> */}
           {/* contact form  */}
         </main>
       </div>
