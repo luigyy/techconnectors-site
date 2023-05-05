@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
@@ -73,7 +72,7 @@ const Home: NextPage = () => {
         setShowNewsletterPopup({ state: true, active: false });
       }
     }
-  }, [inView]);
+  }, [inView, showNewsletterPopup.active]);
   return (
     <>
       <Head>
@@ -285,6 +284,7 @@ const Home: NextPage = () => {
                   className="mx-7 w-24 object-contain grayscale  md:w-36"
                   src={item}
                   alt={item}
+                  key={index}
                 />
               ))}
             </div>
