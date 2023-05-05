@@ -8,7 +8,7 @@ const _index = () => {
           Quienes somos?
         </h1>
 
-        <div className="flex flex-wrap justify-around gap-4 gap-y-7">
+        <div className="flex flex-wrap justify-around gap-4 md:gap-y-7">
           <p className=" glow-on-hover max-w-[400px] rounded-2xl bg-white px-6 py-2   ">
             Somos una empresa enfocada en acelerar la transformación digital
             Preparamos a las empresas para el uso de tecnologías que humanizan
@@ -29,7 +29,7 @@ const _index = () => {
           </p>
         </div>
       </div>
-      <div className="py-20">
+      <div className="mt-12 py-20 md:mt-0">
         <h1 className="text-center font-fjalla text-5xl tracking-wide">
           Connectors:
         </h1>

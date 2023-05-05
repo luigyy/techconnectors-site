@@ -1,3 +1,4 @@
+import Link from "next/link";
 const NavbarModal = ({
   modal,
   setModal,
@@ -20,32 +21,41 @@ const NavbarModal = ({
             </div>
             <ul className="font-display -my-2 divide-y divide-zinc-100 pt-5 text-base  font-normal normal-case text-zinc-600">
               <li>
-                <a
+                <Link
                   onClick={() => setModal(false)}
-                  href="#services"
+                  href="/#services"
                   className="block py-2 "
                 >
                   Servicios
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   onClick={() => setModal(false)}
                   href="https://calendly.com/techconnectors/30min"
                   target="_blank"
                   className="block py-2 "
                 >
                   Agendar cita
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   onClick={() => setModal(false)}
-                  href="#form"
+                  href="/#form"
                   className="block py-2 "
                 >
                   Contacto
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => setModal(false)}
+                  href="/about"
+                  className="block py-2 "
+                >
+                  Sobre nosotros
+                </Link>
               </li>
             </ul>
           </div>

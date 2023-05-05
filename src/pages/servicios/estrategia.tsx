@@ -23,7 +23,7 @@ const Robocorp = () => {
           oportunidades que ofrece la era digital.
         </p>
 
-        <div className="grid grid-cols-3 gap-5  ">
+        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3  ">
           {[
             { img: "defining.png", description: "Definir objetivos de la DX" },
             {

@@ -43,7 +43,7 @@ const Fabrica = () => {
             />
           </div>
           <div className="md:w-1/2">
-            <h1 className="mb-5 px-4 text-center font-fjalla text-3xl text-zinc-100 md:text-left">
+            <h1 className="mb-5 px-4 py-10 text-center font-fjalla text-3xl text-zinc-100 md:mt-0 md:text-left">
               Desarrollamos la aplicacion perfecta basado en estos objetivos
             </h1>
           </div>

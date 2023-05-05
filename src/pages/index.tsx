@@ -86,10 +86,10 @@ const Home: NextPage = () => {
             <h1 className="text-center font-fjalla text-4xl font-semibold tracking-tight md:text-left md:text-6xl">
               Conectando tecnología con tus necesidades.
             </h1>
-            <h1 className="text-center font-fjalla text-3xl font-semibold tracking-tight md:text-left md:text-6xl">
+            <h1 className="px-3 text-center font-fjalla text-3xl font-semibold tracking-tight md:text-left md:text-6xl">
               Experimenta el poder de la tecnología en tu negocio.
             </h1>
-            <p className="text-center font-semibold text-zinc-600 md:text-left md:text-xl">
+            <p className="px-3 text-center font-semibold text-zinc-600 md:text-left md:text-xl">
               Hacemos el trabajo de las personas mas fácil a través de nuestras
               soluciones tecnológicas.
             </p>
@@ -291,7 +291,10 @@ const Home: NextPage = () => {
           </div>
           {/* testimonials */}
           <div>
-            <h1 className="box-border pb-12 text-center font-fjalla text-2xl md:text-5xl">
+            <h1
+              id="form"
+              className="box-border pb-12 text-center font-fjalla text-2xl md:text-5xl"
+            >
               <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
                 {" "}
                 Contáctanos
