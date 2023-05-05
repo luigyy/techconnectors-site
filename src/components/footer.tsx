@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = ({}) => {
   return (
-    <div className="mt-24    bg-zinc-800    px-5 pt-5" id="footer">
+    <div className=" mt-24 w-full   bg-zinc-800    px-5 pt-5" id="footer">
       <div className="flex flex-wrap justify-between gap-5 md:justify-normal md:gap-0">
         <div className="  md:w-1/3">
           <h1 className="font-fjalla text-lg text-[#fb1922]">TechConnectors</h1>
