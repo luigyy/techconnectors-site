@@ -22,15 +22,10 @@ const config = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
 
   rules: {
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      {
-        prefer: "type-imports",
-        fixStyle: "inline-type-imports",
-      },
-    ],
+    "@typescript-eslint/consistent-type-imports": "off",
     "react/no-unescaped-entities": 0,
     "@next/next/no-img-element": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
     "@next/next/no-page-custom-font": "off",
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
