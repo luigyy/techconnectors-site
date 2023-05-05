@@ -1,8 +1,6 @@
 import React from "react";
 
-interface _indexProps {}
-
-const _index: React.FC<_indexProps> = () => {
+const _index = () => {
   return (
     <div>
       <div className="dotted-bg h-screen px-32 py-12">
