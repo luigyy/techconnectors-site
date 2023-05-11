@@ -13,7 +13,7 @@ const ServiceCard: NextPage<{
   return (
     <Link
       href={link}
-      className="relative aspect-[11/13] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5  transition-all duration-1000 hover:scale-105 hover:border-[#bf1922] hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0"
+      className="relative aspect-[11/13] w-[270px] overflow-hidden rounded-lg border   border-zinc-50/5  transition-all duration-1000 hover:scale-105 hover:border-[#bf1922] hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0"
     >
       <img
         src={pic}
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
               Como te ayudamos
             </h1>
 
-            <div className="flex flex-wrap justify-center gap-20 gap-x-32  2xl:grid 2xl:grid-cols-3">
+            <div className="flex flex-wrap justify-center gap-20 gap-x-32 ">
               {[
                 {
                   title: "Inteligencia empresarial",

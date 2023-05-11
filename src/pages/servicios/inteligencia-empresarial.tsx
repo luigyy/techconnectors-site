@@ -146,25 +146,15 @@ const InteligenciaEmpresarial = ({}) => {
               Mejora competitiva del mercado
             </h1>
             <h1 className="text-center text-7xl font-semibold text-zinc-50">
-              90%
+              35%
             </h1>
           </div>
         </div>
       </div>
 
       <div className="px-4 py-16 md:px-32">
-        <h1 className="text-center font-fjalla text-3xl">Quallie</h1>
-        <h1 className="text-center text-lg italic text-zinc-500">
-          Lorem, ipsum.
-        </h1>
+        <h1 className="text-center font-fjalla text-3xl">Exek BI</h1>
 
-        <p className="mx-auto w-[85%] py-5 text-zinc-600 md:w-auto md:px-32">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-          molestiae maiores incidunt recusandae delectus pariatur provident
-          aperiam ratione blanditiis molestias culpa facere aliquid totam eaque,
-          voluptatum error repudiandae, explicabo dignissimos ad beatae
-          temporibus quasi at laudantium. Sapiente cumque nulla adipisci!
-        </p>
         <iframe
           className="mx-auto mt-5 aspect-[800/450] max-h-[450px] w-[85%] max-w-[800px]"
           src="https://www.youtube.com/embed/nine3gQLhAQ"
