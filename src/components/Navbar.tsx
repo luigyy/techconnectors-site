@@ -46,7 +46,7 @@ const Navbar = () => {
           >
             Agendar cita
           </Link>
-          <Link href="/#footer" className="text-sm md:text-lg">
+          <Link href="/#form" className="text-sm md:text-lg">
             Contacto
           </Link>
           <Link href="/about" className="text-sm md:text-lg">

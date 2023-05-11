@@ -4,54 +4,29 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
-const DxCards: NextPage<{ pic: string; title: string; delay: number }> = ({
-  pic,
-  title,
-  delay,
-}) => {
-  return (
-    <div
-      style={{ animationDelay: `${delay * 1000}ms` }}
-      className=" relative aspect-square w-[250px] rounded-lg [&>*:nth-child(1)]:hover:grayscale-0 "
-    >
-      <img
-        src={pic}
-        style={{ animationDelay: `${delay * 1000}ms` }}
-        className="dx-card-animation absolute h-full w-full object-contain grayscale  hover:grayscale-0"
-        alt=""
-      />
-      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 pt-16 font-fjalla text-xl font-semibold text-[#BF1922]">
-        {title}
-      </h1>
-    </div>
-  );
-};
-
 const ServiceCard: NextPage<{
   title: string;
   description: string;
-  poweredBy: string;
   pic: string;
   link: string;
-}> = ({ title, description, poweredBy, pic, link }) => {
+}> = ({ title, description, pic, link }) => {
   return (
     <Link
       href={link}
-      className=" relative aspect-[11/16] w-[270px] overflow-hidden rounded-lg border border-zinc-50/5  transition-all duration-1000 hover:scale-105 hover:border-[#bf1922] hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0"
+      className="relative aspect-[11/13] w-[270px] overflow-hidden rounded-lg border  border-zinc-50/5  transition-all duration-1000 hover:scale-105 hover:border-[#bf1922] hover:border-zinc-50/[15%] [&>*]:hover:translate-y-0 [&>*]:hover:grayscale-0"
     >
       <img
         src={pic}
-        className="absolute p-4 grayscale transition-all duration-700"
+        className="float absolute  ml-5 w-[80%] p-4 transition-all duration-700"
         alt=""
       />
-      <div className="absolute h-full  w-full bg-zinc-900/70  transition duration-700 md:translate-y-[80%]">
+      <div className="absolute h-full  w-full bg-zinc-900/70  transition duration-700 md:translate-y-[75%]">
         <h1 className=" px-5 pb-3  pt-6 font-fjalla text-xl tracking-tight text-zinc-300">
           {title}
         </h1>
-        <p className="p-5  text-zinc-50"> {description}</p>
-        <p className="absolute bottom-10 right-0 pr-2 font-fjalla text-zinc-200 ">
-          powered by{" "}
-          <span className="font-fjalla text-[#BF1922]">{poweredBy}</span>
+        <p className="p-5 text-sm text-zinc-50"> {description}</p>
+        <p className="p-5 font-semibold italic text-[#bf1922]">
+          Presiona para ver mas
         </p>
       </div>
     </Link>
@@ -150,7 +125,7 @@ const Home: NextPage = () => {
                 <img
                   key={index}
                   src={`${item}.png`}
-                  className="mx-7 w-24 object-contain grayscale  md:w-36"
+                  className="mx-7 w-24 object-contain grayscale transition-all duration-500 hover:grayscale-0  md:w-36"
                   alt=""
                 />
               ))}
@@ -164,59 +139,63 @@ const Home: NextPage = () => {
             id="services"
           >
             <h1 className="pb-1  text-center font-fjalla text-4xl tracking-tight text-zinc-100 ">
-              Acelera <span className="font-fjalla text-[#bf1922]">5x</span> tu
-              negocio!
+              Como te ayudamos
             </h1>
-            <h1 className="pb-10 text-center  text-xl text-zinc-400">
-              Estos son algunos de nuestros servicios
-            </h1>
-            <div className="flex flex-wrap justify-center gap-20 gap-x-40">
+
+            <div className="flex flex-wrap justify-center gap-20 gap-x-32  2xl:grid 2xl:grid-cols-3">
               {[
                 {
-                  title: "Inteligencia de negocios",
+                  title: "Inteligencia empresarial",
                   description:
-                    "Con nuestra solución de BI, proveemos de un asistente inteligente que relaciona todas las aristas de su negocio y sugiere caminos para la generación de caja basado en sus datos contables, ventas e inventarios",
+                    "Somos un aliado estratégico en la creación e implementación de soluciones de entendimiento empresarial para potenciar el rendimiento y crecimiento de la empresa.",
                   poweredBy: "exek.io + quallie",
-                  pic: "inteligencia-de-negocios.png",
+                  pic: "inteligencia-empresarial.png",
                   link: "/servicios/inteligencia-empresarial",
                 },
                 {
-                  title: "Hiperautomatización ",
+                  title: "Automatización Gen2",
                   description:
-                    "RPA permite aumentar la productividad y hacer que la fuerza laboral se dedique a tomar decisiones estratégicas del negocio. ",
+                    "Expertos en la mejora de procesos a través de la automatización de procesos Gen2 sin licenciamiento",
                   poweredBy: "robocorp.com",
                   pic: "rpa.png",
                   link: "/servicios/rpa",
                 },
                 {
-                  title: "Ecosistemas digitales",
+                  title: "Centralización y digitalización (UCD)",
                   description:
-                    "Digitalizamos los procesos operativos con la ayuda de Monday.com, con la cual agilizamos y simplificamos el trabajo de pequeñas y grandes empresas",
+                    "Somos un socio confiable en la digitalización y centralización  de las operaciones a través de tecnología. Trabajamos en conjunto para encontrar las mejores soluciones y tecnologías que se adecuan a cada necesidad.",
                   poweredBy: "Monday.com",
-                  pic: "monday2.png",
+                  pic: "centralizacion.png",
                   link: "/servicios/monday",
+                },
+                {
+                  title: "Talleres de humanización",
+                  description:
+                    "Nuestro equipo de expertos se dedica a impartir cursos a diferente nivel para el manejo del cambio organizacional ",
+                  poweredBy: "Estrategas de T.D.",
+                  pic: "talleres.png",
+                  link: "/servicios/estrategia",
                 },
                 {
                   title: "Estrategia de transformación digital",
                   description:
-                    "Creamos planes detallados para objetivos especificos.",
-                  poweredBy: "Estrategas de T.D.",
-                  pic: "sistema-de-referidos.png",
-                  link: "/servicios/estrategia",
+                    "Somos un aliado en la creación estratégica para el cambio digital e  innovación empresarial enfocados en la rentabilidad y optimización tanto huamana como operacional.",
+                  poweredBy: "Soluciones personalizadas",
+                  pic: "estrategia.png",
+                  link: "/servicios/fabrica",
                 },
                 {
-                  title: "Fabrica de la innovación",
+                  title: "Fabrica de innovación",
                   description:
-                    "Creamos soluciones personalizadas para su empresa",
+                    "Nuestro departamento de innovación y desarrollo tecnológico se enfoca en crear soluciones innovadoras para mejorar los ecosistemas empresariales actuales.",
                   poweredBy: "Soluciones personalizadas",
-                  pic: "soluciones-personalizadas.png",
+                  pic: "fabrica.png",
                   link: "/servicios/fabrica",
                 },
               ].map((item, index) => (
                 <ServiceCard
                   title={item.title}
                   description={item.description}
-                  poweredBy={item.poweredBy}
                   pic={item.pic}
                   link={item.link}
                   key={index}
@@ -226,50 +205,10 @@ const Home: NextPage = () => {
           </div>
           {/* services section  */}
 
-          {/* metodologia dx  */}
-          <div className="overflow-hidden pb-16" ref={ref}>
-            <h1 className="text-center font-fjalla text-4xl font-semibold">
-              Metodologia DX
-            </h1>
-            <div className="grid place-items-center gap-y-2 sm:grid-cols-2 sm:gap-y-5 md:grid-cols-3 ">
-              <DxCards
-                delay={1}
-                title="Descubrimiento"
-                pic="descubrimiento-dx.jpeg"
-              />
-              <DxCards
-                delay={3}
-                title="Modelamiento de solución"
-                pic="modelamiento-dx.jpeg"
-              />
-              <DxCards
-                delay={5}
-                title="Gerencia de proyecto"
-                pic="gerencia-dx.jpeg"
-              />
-              <DxCards
-                delay={7}
-                title="Implementación"
-                pic="implementacion-dx.jpeg"
-              />
-              <DxCards
-                delay={9}
-                title="Optimización"
-                pic="optimizacion-dx.jpeg"
-              />
-              <DxCards
-                delay={11}
-                title="Soporte y mantenimiento"
-                pic="soporte-dx.jpeg"
-              />
-            </div>
-          </div>
-          {/* metodologia dx  */}
-
           {/* testimonials */}
           <div className="mt-28 pb-24 ">
             <h1 className=" pb-12 text-center text-3xl text-zinc-400 ">
-              Estos clientes confían en nosotros
+              Confían en nosotros
             </h1>
             <div className="mx-auto flex flex-wrap  justify-center gap-8 md:w-2/3 ">
               {[
@@ -279,9 +218,10 @@ const Home: NextPage = () => {
                 "integra-logo.png",
                 "loteria-logo.png",
                 "partnergy-logo.png",
+                "Logo-Lmexpress.png",
               ].map((item, index) => (
                 <img
-                  className="mx-7 w-24 object-contain grayscale  md:w-36"
+                  className="mx-7 w-24 object-contain grayscale transition-all duration-500 hover:grayscale-0  md:w-36"
                   src={item}
                   alt={item}
                   key={index}
@@ -299,10 +239,10 @@ const Home: NextPage = () => {
                 {" "}
                 Contáctanos
               </span>{" "}
-              y recibe una asesoría gratis
+              para un asesoría gratuíta
             </h1>
             <iframe
-              className=" mx-auto h-[1200px] w-[85%] max-w-[400px] border-2 bg-white"
+              className=" mx-auto h-[1000px] w-[85%] max-w-[400px] border-2 bg-white"
               src="https://forms.monday.com/forms/embed/f7128c563225d103bf0916f48c8e5644?r=use1"
             ></iframe>
           </div>
