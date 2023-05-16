@@ -235,7 +235,7 @@ const Home: NextPage = () => {
               id="form"
               className="box-border pb-12 text-center font-fjalla text-2xl md:text-5xl"
             >
-              <span className="border-b-2 border-[#BF1922] font-fjalla text-[#BF1922]">
+              <span className="cycle-underline font-fjalla text-[#BF1922]">
                 {" "}
                 Contáctanos
               </span>{" "}

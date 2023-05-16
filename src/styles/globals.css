@@ -25,6 +25,33 @@ html {
   position: relative;
 }
 
+.fancy-underline {
+  position: relative;
+}
+.fancy-underline:hover {
+  transition: all 0.1s ease-in;
+  transform: scale(105%);
+}
+
+.fancy-underline::before {
+  content: "";
+  position: absolute;
+  background-color: #fb1922;
+  width: 0%;
+  height: 2px;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+  bottom: -1px;
+}
+.fancy-underline:hover::before {
+  content: "";
+  position: absolute;
+  background-color: #fb1922;
+  width: 100%;
+  height: 2px;
+  bottom: -1px;
+}
+
 .red-dotted-bg {
   /* border: 2px red solid; */
   /* background-image: radial-gradient(#a39e91 1px, transparent 1px);
@@ -98,6 +125,35 @@ html {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+}
+
+.cycle-underline {
+  position: relative;
+}
+
+.cycle-underline::before {
+  content: "";
+  position: absolute;
+  background-color: #bf1922;
+  width: 0%;
+  height: 3px;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+  bottom: -1px;
+  animation: cycle-underline 2s infinite ease-out;
+}
+
+@keyframes cycle-underline {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 @keyframes float {

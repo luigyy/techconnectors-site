@@ -116,9 +116,7 @@ const Rpa = () => {
       </div>
       <div className="px-4 py-16 md:px-32">
         <h1 className="text-center font-fjalla text-3xl">Robocorp Gen2</h1>
-        <h1 className="text-center text-lg italic text-zinc-500">
-          Lorem, ipsum.
-        </h1>
+        <h1 className="text-center text-lg italic text-zinc-500">RPA</h1>
 
         <p className="mx-auto w-[85%] py-5 text-center font-fjalla text-2xl text-zinc-600 md:w-auto md:px-32">
           Robocorp Gen2 de RPA es más rápido, estable y con un costo menor SIN

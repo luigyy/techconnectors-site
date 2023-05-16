@@ -13,7 +13,7 @@ const NavbarModal = ({
           <div className="scale-10 fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 opacity-100 ring-1 ring-zinc-900/5">
             <div className="flex items-center justify-between">
               <h1 className=" font-fjalla tracking-wider text-zinc-700">
-                Navigation
+                Navegación
               </h1>
               <button onClick={() => setModal(false)}>
                 <h1 className=" text-lg font-semibold">X</h1>
