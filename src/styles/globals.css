@@ -148,6 +148,59 @@ html {
   animation: twinkle-star 1.5s infinite ease-out;
 }
 
+.blob-1 {
+  animation: blob-1-animation 8s infinite ease-out;
+}
+.blob-2 {
+  animation: blob-2-animation 8s infinite ease-out;
+}
+.blob-3 {
+  animation: blob-3-animation 8s infinite ease-out;
+}
+
+@keyframes blob-1-animation {
+  0% {
+    transform: translate(10px);
+  }
+  33% {
+    transform: translate(-100px, 10px);
+  }
+  66% {
+    transform: translate(75px, 100px);
+  }
+  100% {
+    transform: translate(10px);
+  }
+}
+@keyframes blob-2-animation {
+  0% {
+    transform: translate(0px);
+  }
+  33% {
+    transform: translate(-100px, 100px);
+  }
+  66% {
+    transform: translate(75px, 50px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes blob-3-animation {
+  0% {
+    transform: translate(-10px);
+  }
+  33% {
+    transform: translate(-100px, 10px);
+  }
+  66% {
+    transform: translate(-75px, 100px);
+  }
+  100% {
+    transform: translate(-10px);
+  }
+}
+
 @keyframes twinkle-star {
   0% {
     transform: scale(130%) rotate(45deg);

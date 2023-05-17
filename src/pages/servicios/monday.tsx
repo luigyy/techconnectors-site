@@ -107,11 +107,11 @@ const Monday = () => {
         </div>
       </div>
 
-      <div className=" h-screen justify-center py-20">
+      <div className="min-h-screen justify-center py-20 ">
         <h1 className="text-center font-fjalla text-5xl">
           Crea procesos mas inteligentes
         </h1>
-        <div className="mx-auto mt-10 flex w-full max-w-[900px] justify-around  px-4 py-5">
+        <div className=" relative mx-auto mt-10 flex w-full max-w-[900px] flex-wrap justify-around gap-y-5  px-4  py-5 md:gap-y-0">
           {[
             {
               src: "monday-productivity.png",
@@ -138,10 +138,17 @@ const Monday = () => {
                   alt=""
                   className="mx-auto w-1/2 p-2"
                 />
-                <p className="px-3 py-5 text-center text-lg ">{item.text}</p>
+                <p className="px-3 py-5 text-center text-lg font-semibold ">
+                  {item.text}
+                </p>
               </div>
             </>
           ))}
+          {/* blobs */}
+          <div className="blob-1 absolute left-0 -z-10 h-72 w-72 rounded-full bg-[#ffcc00] opacity-30 mix-blend-multiply blur-3xl md:opacity-40 "></div>
+          <div className="blob-2 absolute top-[300px] -z-10 h-72 w-72 rounded-full bg-[#fb275d] opacity-30 mix-blend-multiply blur-3xl md:bottom-auto md:top-auto  md:opacity-40"></div>
+          <div className="blob-3 absolute bottom-16 right-0 -z-10 h-72 w-72 rounded-full bg-[#00cc6f] opacity-30 mix-blend-multiply  blur-3xl md:bottom-auto  md:opacity-40 "></div>
+          {/* blobs */}
         </div>
       </div>
 
@@ -149,12 +156,8 @@ const Monday = () => {
         <h1 className="text-center font-fjalla text-3xl">Monday</h1>
         <h1 className="text-center text-lg italic text-zinc-500"></h1>
 
-        <p className="mx-auto w-[85%] py-5 text-zinc-600 md:w-auto md:px-32">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-          molestiae maiores incidunt recusandae delectus pariatur provident
-          aperiam ratione blanditiis molestias culpa facere aliquid totam eaque,
-          voluptatum error repudiandae, explicabo dignissimos ad beatae
-          temporibus quasi at laudantium. Sapiente cumque nulla adipisci!
+        <p className="mx-auto w-[85%] py-5 text-center text-lg text-zinc-600 md:w-auto md:px-32">
+          Una breve introducción a Monday.com
         </p>
         <iframe
           className="mx-auto  mt-12 aspect-[800/450] max-h-[450px] w-[85%] max-w-[800px]"
