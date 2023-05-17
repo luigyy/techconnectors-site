@@ -143,6 +143,25 @@ html {
   animation: cycle-underline 2s infinite ease-out;
 }
 
+.twinkling-stars {
+  animation: twinkle 1.5s infinite ease-out;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(125%) rotate(45deg);
+    filter: saturate(700%);
+  }
+  50% {
+    transform: scale(20%) rotate(0deg);
+    filter: saturate(100%);
+  }
+  100% {
+    transform: scale(125%) rotate(45deg);
+    filter: saturate(700%);
+  }
+}
+
 @keyframes cycle-underline {
   0% {
     width: 0%;
