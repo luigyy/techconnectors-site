@@ -3,22 +3,22 @@ import Image from "next/image";
 const Monday = () => {
   return (
     <div className="">
-      <div className="red-dotted-bg h-[60vh] overflow-hidden   px-4  md:px-32">
-        <div className="relative mx-auto mt-10 max-h-[300px] max-w-[800px] ">
-          <h1 className="rounded-xl  bg-white bg-opacity-30 py-6 text-center font-fjalla text-6xl  font-semibold md:mt-20">
+      <div className="red-dotted-bg  h-[60vh] overflow-hidden  px-4  md:px-32">
+        <div className=" relative mx-auto mt-10 max-h-[300px] max-w-[800px] py-10 md:py-0  ">
+          <h1 className="rounded-xl  bg-white bg-opacity-30 py-6 text-center font-fjalla text-6xl font-semibold  md:mt-20 2xl:text-7xl">
             Somos partners oficiales de
           </h1>
-          <h1 className="flex items-center justify-center gap-x-2 bg-white bg-opacity-60 py-2 text-center text-4xl font-semibold">
+          <h1 className="flex items-center justify-center gap-x-2 bg-white bg-opacity-30 py-2 text-center text-4xl font-semibold">
             <span>
               <Image src="/monday-logo.png" width={60} height={60} alt="" />
             </span>
-            <span className="font-fjalla text-5xl">
+            <span className="font-fjalla text-4xl 2xl:text-6xl">
               Monday<span className="text-3xl font-normal">.com</span>
             </span>
           </h1>
           {/* stars  */}
           <Image
-            className="twinkling-stars absolute left-14 -z-10 border"
+            className="twinkling-stars absolute left-14 -z-10 "
             src={"/star.png"}
             width={30}
             height={30}
@@ -68,7 +68,84 @@ const Monday = () => {
           {/* stars  */}
         </div>
       </div>
-      <div className="px-4 py-16 md:px-32">
+      <div className=" flex min-h-screen w-full flex-wrap gap-y-5 overflow-x-hidden md:gap-y-0">
+        <div className="flex w-full items-center  px-4 py-5 md:w-1/2 md:px-8">
+          <div className="mx-auto">
+            <h1 className=" max-w-[500px] py-10 text-center font-fjalla text-6xl md:text-left  md:text-7xl">
+              <span className="monday-gradient font-fjalla text-[#fb275d]">
+                Intégrate
+              </span>{" "}
+              <span className="font-fjalla text-[#ffcc00]">sin</span>{" "}
+              <span className="font-fjalla text-[#00cc6f]">problemas</span>
+            </h1>
+            <p className=" text- max-w-[500px]  text-center text-zinc-600 md:text-left md:text-2xl ">
+              Conéctate a las herramientas que tu organización ya utiliza y
+              gestiona todo tu trabajo desde un solo lugar. Realiza
+              integraciones con más de 50 herramientas externas, incluyendo
+              Microsoft Teams, Adobe Creative Cloud, Jira, Salesforce, NetSuite
+              y muchas más.
+            </p>
+          </div>
+        </div>
+        <div className=" relative flex w-full items-center justify-center py-10 md:w-1/2   md:py-0">
+          <div className="absolute  -left-5 -z-10 h-full w-[150vh] bg-zinc-800  md:-skew-x-[25deg]"></div>
+          <div className="z-10 mx-auto ">
+            <h1 className=" py-4  text-center font-fjalla text-4xl text-[#ffcc00] 2xl:text-5xl ">
+              Un lugar
+            </h1>
+            <Image
+              src={"/monday-centralized.png"}
+              width={1000}
+              height={1000}
+              alt=""
+              className="rotate-animation max-w- mx-auto w-[75%]"
+            />
+            <h1 className="py-4 text-center font-fjalla text-4xl text-[#00cc6f] 2xl:text-5xl ">
+              para gestionarlo todo
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div className=" h-screen justify-center py-20">
+        <h1 className="text-center font-fjalla text-5xl">
+          Crea procesos mas inteligentes
+        </h1>
+        <div className="mx-auto mt-10 flex w-full max-w-[900px] justify-around  px-4 py-5">
+          {[
+            {
+              src: "monday-productivity.png",
+              text: "Aumenta la productividad en toda tu organización con una plataforma flexible.",
+            },
+            {
+              src: "monday-savetime.png",
+              text: "Crea flujos de trabajo personalizados que se adapten a las metodologías de trabajo de cada equipo ",
+            },
+            {
+              src: "monday-workflow.png",
+              text: " Ahorra tiempo con plantillas y formularios.",
+            },
+          ].map((item, index) => (
+            <>
+              <div
+                key={index}
+                className=" aspect-[13/16] w-[250px] rounded-xl border py-5 transition-all hover:scale-[103%]"
+              >
+                <Image
+                  src={`/${item.src}`}
+                  width={200}
+                  height={200}
+                  alt=""
+                  className="mx-auto w-1/2 p-2"
+                />
+                <p className="px-3 py-5 text-center text-lg ">{item.text}</p>
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
+
+      <div className="overflow-hidden  bg-white px-4 py-16 md:px-32">
         <h1 className="text-center font-fjalla text-3xl">Monday</h1>
         <h1 className="text-center text-lg italic text-zinc-500"></h1>
 
