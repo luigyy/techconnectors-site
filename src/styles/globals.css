@@ -60,6 +60,8 @@ html {
     radial-gradient(red 1px, transparent 1px) 10px 10px/20px 20px;
   animation: move-dotted-bg 60s infinite ease-out;
   position: relative;
+  background-color: white;
+  z-index: -10;
 }
 
 /* button effect  */
@@ -146,20 +148,6 @@ html {
   animation: twinkle-star 5s infinite ease-out;
 }
 
-@keyframes twinkle-star {
-  0% {
-    transform: scale(100%);
-    filter: saturate(600%);
-  }
-  50% {
-    transform: scale(75%);
-    filter: saturate(100%);
-  }
-  100% {
-    transform: scale(100%);
-    filter: saturate(300%);
-  }
-}
 @keyframes cycle-underline {
   0% {
     width: 0%;
