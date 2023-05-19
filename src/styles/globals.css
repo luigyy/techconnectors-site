@@ -166,6 +166,42 @@ html {
   animation: blob-3-animation 8s infinite ease-out;
 }
 
+.about-blob-1 {
+  animation: about-blob-1-animation 4s infinite ease-out;
+}
+.about-blob-2 {
+  animation: about-blob-2-animation 4s infinite ease-out;
+}
+
+@keyframes about-blob-1-animation {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  33% {
+    transform: translate(50vw, 50vh);
+  }
+  66% {
+    transform: translate(80vw, 0vh);
+  }
+  100% {
+    transform: translate(0vw, 0vh);
+  }
+}
+@keyframes about-blob-2-animation {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  33% {
+    transform: translate(-50vw, -50vh);
+  }
+  66% {
+    transform: translate(-80vw, -0vh);
+  }
+  100% {
+    transform: translate(0vw, 0vh);
+  }
+}
+
 @keyframes blob-1-animation {
   0% {
     transform: translate(10px);
