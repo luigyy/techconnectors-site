@@ -6,7 +6,7 @@ import Link from "next/link";
 const Navbar = () => {
   const [modal, setModal] = useState(false);
   return (
-    <div className=" flex items-center justify-between border-b border-b-zinc-400/40 bg-white px-5 py-2 font-semibold shadow-sm">
+    <div className=" flex items-center justify-between border-b border-b-zinc-400/40  bg-white px-5 py-2 font-semibold shadow-sm">
       {/* left */}
       <div className="fancy-underline tracking-tight">
         <Link

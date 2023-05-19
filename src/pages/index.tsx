@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
@@ -55,23 +56,44 @@ const Home: NextPage = () => {
         <meta name="description" content="Sitio web de techconnectors" />
       </Head>
       <div className="mx-auto min-w-fit ">
-        <main className="relative z-0">
+        <main className="z-0 overflow-x-hidden">
           {/* hero section  */}
-          <div className="dotted-bg flex flex-col items-center justify-center  gap-3 pb-28 pt-28 ">
-            <h1 className="text-center font-fjalla text-4xl font-semibold tracking-tight md:text-left md:text-6xl">
+          <div className=" hidden flex-col items-center justify-center gap-3  bg-[#bf1922] pb-28 pt-28 ">
+            <h1 className="text-center font-fjalla text-4xl font-semibold tracking-tight text-zinc-300 md:text-left md:text-6xl">
               Conectando tecnología con tus necesidades.
             </h1>
-            <h1 className="px-3 text-center font-fjalla text-3xl font-semibold tracking-tight md:text-left md:text-6xl">
+            <h1 className="px-3 text-center font-fjalla text-3xl font-semibold tracking-tight text-zinc-300 md:text-left md:text-6xl">
               Experimenta el poder de la tecnología en tu negocio.
             </h1>
-            <p className="px-3 text-center font-semibold text-zinc-600 md:text-left md:text-xl">
+            <p className="px-3 text-center font-semibold text-zinc-300  md:text-left md:text-xl">
               Hacemos el trabajo de las personas mas fácil a través de nuestras
               soluciones tecnológicas.
             </p>
-            <div className="mt-5 flex gap-4">
+          </div>
+          <div className="dotted-bg relative min-h-[75vh] overflow-hidden px-4  ">
+            {/* waves  */}
+            <div className="bg-waves h-full border"></div>
+            <div className="bg-waves bg-waves-2 h-full"></div>
+            <div className="bg-waves bg-waves-3 h-full"></div>
+            {/* waves  */}
+            <Image
+              src={"/techconnectors-black-logo.png"}
+              width={170}
+              height={170}
+              alt=""
+              className="mx-auto mt-10 saturate-200"
+            />
+            <h1 className=" mt-2 text-center font-fjalla text-5xl md:text-6xl">
+              TechConnectors
+            </h1>
+            <h1 className="mt-2 text-center text-2xl font-semibold md:text-3xl">
+              Conectamos estrategía con tecnología para acelerar la
+              transformación empresarial.
+            </h1>
+            <div className=" mt-5 flex justify-center gap-4">
               <a
                 href="#footer"
-                className="rounded-lg border bg-zinc-50 px-3 py-2 font-semibold tracking-tight text-zinc-800 shadow transition hover:scale-105"
+                className="rounded-lg border bg-zinc-200 px-3 py-2 font-semibold tracking-tight text-zinc-800 shadow transition hover:scale-105"
               >
                 Síguenos
               </a>
@@ -116,7 +138,7 @@ const Home: NextPage = () => {
           {/* newsletter popup  */}
 
           {/* trusted by section  */}
-          <div className="pb-40">
+          <div className=" pb-40 pt-14">
             <h1 className="text-tracking-tight pb-10 text-center text-2xl text-zinc-400  md:text-3xl">
               Nuestros partners
             </h1>
@@ -125,7 +147,7 @@ const Home: NextPage = () => {
                 <img
                   key={index}
                   src={`${item}.png`}
-                  className="mx-7 w-24 object-contain grayscale transition-all duration-500 hover:grayscale-0  md:w-36"
+                  className="mx-7  w-36 object-contain grayscale transition-all duration-500  hover:grayscale-0"
                   alt=""
                 />
               ))}
@@ -135,10 +157,10 @@ const Home: NextPage = () => {
 
           {/* services section  */}
           <div
-            className="relative  mx-1 mb-32 overflow-hidden rounded-lg bg-zinc-900 py-10 pb-16"
+            className="relative  mx-1 mb-32 overflow-hidden rounded-lg  bg-zinc-900 py-10 pb-16 "
             id="services"
           >
-            <h1 className="pb-1  text-center font-fjalla text-4xl tracking-tight text-zinc-100 ">
+            <h1 className="pb-4  text-center font-fjalla text-4xl tracking-tight text-zinc-100 ">
               Como te ayudamos
             </h1>
 
@@ -206,7 +228,7 @@ const Home: NextPage = () => {
           {/* services section  */}
 
           {/* testimonials */}
-          <div className="mt-28 pb-24 ">
+          <div className="bg-white pb-24 pt-28 ">
             <h1 className=" pb-12 text-center text-3xl text-zinc-400 ">
               Confían en nosotros
             </h1>
@@ -230,7 +252,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* testimonials */}
-          <div>
+          <div className="bg-white">
             <h1
               id="form"
               className="box-border pb-12 text-center font-fjalla text-2xl md:text-5xl"
