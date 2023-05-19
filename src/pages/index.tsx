@@ -206,7 +206,7 @@ const Home: NextPage = () => {
           {/* services section  */}
 
           {/* testimonials */}
-          <div className="mt-28 pb-24 ">
+          <div className="mt-28 pb-24 " ref={ref}>
             <h1 className=" pb-12 text-center text-3xl text-zinc-400 ">
               Confían en nosotros
             </h1>

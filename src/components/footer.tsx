@@ -3,36 +3,93 @@ import Image from "next/image";
 const Footer = ({}) => {
   return (
     <div className=" mt-24 w-full   bg-zinc-800    px-5 pt-5" id="footer">
-      <div className="flex flex-wrap justify-between gap-5 md:justify-normal md:gap-0">
-        <div className="  md:w-1/3">
-          <h1 className="font-fjalla text-lg text-[#fb1922]">TechConnectors</h1>
-          <h1 className="w-3/4 pt-2 text-zinc-400">
-            Costa Rica, San José, Llorente de Tibas. Calle del progreso.
-          </h1>
-          <a
-            className="  cursor-pointer pt-1 text-zinc-200"
-            href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7041180298125938689"
-            target="_blank"
-          >
-            Subscríbete a nuestra newsletter
-          </a>
-        </div>
-        <div className="  md:w-1/3 ">
-          <h1 className="font-fjalla text-zinc-200 md:text-center">Contacto</h1>
-          <div className="pt-2 text-zinc-200">
-            <h1 className="text-zinc-400 md:text-center">
-              omar@techconnectors.co
-            </h1>
-            <h1 className=" text-zinc-400 md:text-center">+506 70549186</h1>
-            <h1 className=" text-zinc-400 md:text-center">+506 70149487</h1>
+      <div className="grid grid-cols-2 justify-between gap-5 sm:grid-cols-3 md:grid-cols-4 md:justify-normal md:gap-0 2xl:grid-cols-4">
+        <div className="md:pl-14  2xl:pl-20 ">
+          <h1 className="font-fjalla text-zinc-50 ">Descubrir</h1>
+          <div className="flex flex-col gap-1 pt-2 text-zinc-200">
+            <a
+              href="https://monday.com"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Inteligencia empresarial
+            </a>
+            <a
+              href="https://qualesgroup.com/nosotros/"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Automatización Gen2
+            </a>
+            <a
+              href="https://www.exek.co/sobre-exek"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Centralización y digitalización
+            </a>
+            <a
+              href="https://robocorp.com/"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Talleres de humanización
+            </a>
+            <a
+              href="https://robocorp.com/"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Estrategia de transformación
+            </a>
+            <a
+              href="https://robocorp.com/"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Fábrica de innovación
+            </a>
           </div>
         </div>
-        <div className=" md:w-1/3">
-          <h1 className=" font-fjalla text-zinc-200 md:text-right">Siguenos</h1>
-          <div className="flex items-center justify-end gap-3 pt-2">
+        <div className="   md:pl-14 2xl:pl-20 ">
+          <h1 className="font-fjalla text-zinc-200 ">Partners</h1>
+          <div className="flex flex-col gap-1 pt-2 text-zinc-200">
+            <a
+              href="https://monday.com"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Monday.com
+            </a>
+            <a
+              href="https://qualesgroup.com/nosotros/"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              QualesGroup
+            </a>
+            <a
+              href="https://www.exek.co/sobre-exek"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Exek BI
+            </a>
+            <a
+              href="https://robocorp.com/"
+              target="_blank"
+              className=" text-zinc-400 "
+            >
+              Robocorp
+            </a>
+          </div>
+        </div>
+        <div className="overflow-hidden md:pl-14 2xl:pl-20 ">
+          <h1 className=" pb-2 font-fjalla text-zinc-200">Acerca de</h1>
+          <div className=" flex  items-center gap-3 ">
             <a
               href="https://www.linkedin.com/company/techconnectorslatam/"
-              className="mt-5 md:float-right"
+              className=" "
               target="_blank"
             >
               <Image
@@ -44,7 +101,7 @@ const Footer = ({}) => {
             </a>
             <a
               href="https://www.tiktok.com/@techconnectors"
-              className="mt-5 md:float-right"
+              className=" "
               target="_blank"
             >
               <Image
@@ -55,16 +112,54 @@ const Footer = ({}) => {
               />
             </a>
           </div>
+          <span className=" ">
+            <a
+              className="  cursor-pointer font-semibold  text-zinc-200"
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7041180298125938689"
+              target="_blank"
+            >
+              Subscríbete a nuestra newsletter
+            </a>
+          </span>
+        </div>
+        <div className=" md:pl-14 2xl:pl-20">
+          <h1 className=" font-fjalla text-zinc-200 ">
+            Valores de TechConnectors
+          </h1>
+          <div className="pt-2 text-zinc-200">
+            <h1 className="py-1 text-sm text-zinc-400 ">
+              Innovación centrada en las personas
+            </h1>
+            <h1 className=" py-1 text-sm text-zinc-400">
+              Colaboración y trabajo en equipo{" "}
+            </h1>
+            <h1 className=" py-1 text-sm text-zinc-400">
+              Ética y responsabilidad{" "}
+            </h1>
+            <h1 className=" py-1 text-sm text-zinc-400">
+              {" "}
+              Empatía y comprensión
+            </h1>
+            <h1 className=" py-1 text-sm text-zinc-400">
+              Sostenibilidad y responsabilidad social{" "}
+            </h1>
+            <h1 className=" py-1 text-sm text-zinc-400">
+              Aprendizaje continuo y desarrollo personal{" "}
+            </h1>
+          </div>
         </div>
       </div>
+      {/* //  */}
+      {/* //  */}
+      {/* //  */}
       <div className="mt-6 flex flex-col border-t border-zinc-400/60 py-2 md:flex-row">
         <div className="md:w-1/2">
-          <h1 className="text-sm italic text-zinc-200">
+          <h1 className="text-sm italic text-zinc-200 md:pl-14 2xl:pl-20">
             Developed by{" "}
-            <span className="text-zinc-200">
+            <span className="text-zinc-200 ">
               <a
                 href="https://www.linkedin.com/in/luigy-valverde-mena-14b7ba248/"
-                className="font-semibold text-[#fb1922]"
+                className="font-semibold text-[#fb1922] "
                 target="_blank"
               >
                 Luigy Valverde
