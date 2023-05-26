@@ -136,7 +136,7 @@ const Monday = () => {
                   width={200}
                   height={200}
                   alt=""
-                  className="mx-auto w-1/2 p-2"
+                  className=" mx-auto w-1/2 p-2"
                 />
                 <p className="px-3 py-5 text-center text-lg font-semibold ">
                   {item.text}
